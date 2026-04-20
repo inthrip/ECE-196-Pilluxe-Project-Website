@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Milestones | ECE 196 Final Project Proposal</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background: #f8f9fc;
+      color: #1f2937;
+    }
+
+    .page-hero {
+      background: linear-gradient(135deg, #eaf4ff 0%, #f8f9fc 55%, #eef2ff 100%);
+      padding: 80px 0 60px;
+    }
+
+    .section-card {
+      border: none;
+      border-radius: 1.25rem;
+      box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.08);
+    }
+
+    .icon-box {
+      width: 56px;
+      height: 56px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+      background: rgba(13, 110, 253, 0.1);
+      color: #0d6efd;
+      font-size: 1.35rem;
+    }
+
+    .highlight-box {
+      border-radius: 1rem;
+      background: #f8f9fa;
+      border: 1px solid #e9ecef;
+      padding: 1.25rem;
+      height: 100%;
+    }
+
+    .timeline-placeholder {
+      min-height: 220px;
+      border: 2px dashed #cbd5e1;
+      border-radius: 1rem;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #64748b;
+      padding: 2rem;
+    }
+
+    .milestone-list li {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="index.html">ECE 196 Proposal</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="problem.html">Problem</a></li>
+          <li class="nav-item"><a class="nav-link" href="solution.html">Solution</a></li>
+          <li class="nav-item"><a class="nav-link active" href="milestones.html">Milestones</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container text-center">
+      <div class="mb-4 text-start">
+        <a href="index.html" class="btn btn-outline-primary rounded-pill px-4">
+          <i class="bi bi-arrow-left me-2"></i>Back to Home
+        </a>
+      </div>
+      <span class="badge rounded-pill text-bg-light border text-primary px-3 py-2 mb-3">
+        Milestones Page
+      </span>
+      <h1 class="display-5 fw-bold mb-3">Project Milestones and Timeline</h1>
+      <p class="lead text-secondary mx-auto" style="max-width: 780px;">
+        This page lays out the testable hypothesis, timeline figure, and concrete deliverables for the project. Each milestone should describe what will be completed, not just what work will begin.
+      </p>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="card section-card bg-white mb-4">
+        <div class="card-body p-4 p-lg-5">
+          <div class="icon-box mb-3"><i class="bi bi-clipboard-data-fill"></i></div>
+          <h2 class="h3 fw-bold text-primary mb-3">Testable Hypothesis</h2>
+          <p class="text-secondary mb-0">
+            When users utilize this device to assist in taking medication, reminders remove the constant memorization and the incentivization system makes the act of taking feel rewarding rather than tedious; this ultimately improves medication adherence rates among users.
+          </p>
+        </div>
+      </div>
+
+      <div class="card section-card bg-white mb-4">
+        <div class="card-body p-4 p-lg-5">
+          <div class="icon-box mb-3"><i class="bi bi-bar-chart-steps"></i></div>
+          <h2 class="h3 fw-bold text-primary mb-3">Timeline Figure</h2>
+          <p class="text-secondary mb-4">
+            Insert a timeline figure here showing when each concrete milestone will be completed. Build it in PowerPoint, Miro, Canva, or Google Slides, export it as an image, and place it in this section.
+          </p>
+          <div class="timeline-placeholder">
+            Insert timeline figure here. Use specific dates and milestone outcomes, not vague phase names.
+          </div>
+        </div>
+      </div>
+
+      <div class="card section-card bg-white mb-4">
+        <div class="card-body p-4 p-lg-5">
+          <div class="icon-box mb-3"><i class="bi bi-calendar-check-fill"></i></div>
+          <h2 class="h3 fw-bold text-primary mb-3">Milestones</h2>
+          <p class="text-secondary mb-4">
+            These milestones are written as specific deliverables. They describe what will be functioning or completed by each checkpoint.
+          </p>
+          <ol class="milestone-list text-dark fs-5 ps-4 mb-0">
+            <li>PCB design completed with Wi-Fi and Bluetooth capabilities integrated.</li>
+            <li>Mobile app implemented and successfully communicating with the PCB.</li>
+            <li>CAD model finished and the pill container 3D printed with openings for LEDs and push buttons.</li>
+            <li>App configured with visual design, day-by-day streaks, and an incentive-based reward system.</li>
+            <li>Optional: report or diary system implemented so users can track their condition and medication progress over time.</li>
+            <li>Testing phase completed, with the pillbox and app used as intended to identify flaws and evaluate whether the system reduces tedium and feels enjoyable to use.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card section-card bg-white h-100">
+            <div class="card-body p-4 p-lg-5">
+              <h2 class="h4 fw-bold text-primary mb-3">What the instructor wants</h2>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item px-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>A figure of the timeline</li>
+                <li class="list-group-item px-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>Specific dates for when something specific will be completed</li>
+                <li class="list-group-item px-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>Milestones written as outcomes, not vague work phases</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card section-card bg-white h-100">
+            <div class="card-body p-4 p-lg-5">
+              <h2 class="h4 fw-bold text-primary mb-3">Writing Guidance</h2>
+              <p class="text-secondary mb-3">
+                Do not write milestones like “begin software development.” Write milestones like “app successfully sends a notification when the scheduled medication time is reached.”
+              </p>
+              <p class="mb-0 text-secondary">
+                Generate the timeline figure after you choose dates for each of the listed milestones. Once the dates are fixed, turn them into a visual timeline and add the exported image here.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center my-4">
+        <a href="index.html" class="btn btn-primary rounded-pill px-4">
+          <i class="bi bi-house-door-fill me-2"></i>Back to Home
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-top bg-white py-4 mt-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
+      <p class="mb-0 text-secondary">ECE 196 Final Project Proposal</p>
+      <p class="mb-0 text-secondary">Home • Team • Problem • Solution • Milestones</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
