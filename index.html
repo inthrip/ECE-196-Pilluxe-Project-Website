@@ -3,44 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ece196.tunkd.com</title>
+  <title>ECE 196 Final Project Proposal</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+  />
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #222;
-      display: flex;
+      background: #f8f9fc;
+      color: #1f2937;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #eaf4ff 0%, #f8f9fc 55%, #eef2ff 100%);
+      padding: 90px 0;
+    }
+
+    .hero-card,
+    .page-card,
+    .info-card {
+      border: none;
+      border-radius: 1.25rem;
+      box-shadow: 0 0.5rem 1.5rem rgba(15, 23, 42, 0.08);
+    }
+
+    .icon-circle {
+      width: 58px;
+      height: 58px;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      border-radius: 50%;
+      background: rgba(13, 110, 253, 0.1);
+      color: #0d6efd;
+      font-size: 1.4rem;
     }
-    .box {
-      background: white;
-      padding: 40px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+    .navbar-brand {
+      letter-spacing: 0.02em;
     }
-    h1 {
-      margin-top: 0;
-    }
-    p {
-      margin: 8px 0;
-    }
-    code {
-      background: #eee;
-      padding: 2px 6px;
-      border-radius: 4px;
+
+    .section-title {
+      font-weight: 700;
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>HTTPS Test Page</h1>
-    <p>ece196.tunkd.com is working and fetched again.</p>
-    <p>If you can see this over <code>https://</code>, SSL is configured correctly.</p>
-  </div>
-</body>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="index.html">ECE 196 Proposal</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="problem.html">Problem</a></li>
+          <li class="nav-item"><a class="nav-link" href="solution.html">Solution</a></li>
+          <li class="nav-item"><a class="nav-link" href="milestones.html">Milestones</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="badge rounded-pill text-bg-light border text-primary px-3 py-2 mb-3">
+            Final Project Proposal Website
+          </span>
+          <h1 class="display-4 fw-bold mb-3">Welcome to Our ECE 196 Project Website</h1>
+          <p class="lead text-secondary mb-4">
+            This homepage is a clean landing page for our final project proposal. Use the sections below to navigate to the team, problem, solution, and milestones pages.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="team.html" class="btn btn-primary btn-lg px-4">Explore Website</a>
+            <a href="#pages" class="btn btn-outline-secondary btn-lg px-4">View Pages</a>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="card hero-card bg-white">
+            <div class="card-body p-4 p-lg-5">
+              <h2 class="h4 fw-bold mb-3">Website Structure</h2>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                  <span>Home</span>
+                  <span class="badge text-bg-primary rounded-pill">Current</span>
+                </li>
+                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                  <span>Team</span>
+                  <span class="badge text-bg-light border rounded-pill">Page</span>
 </html>
