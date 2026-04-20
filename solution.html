@@ -61,6 +61,16 @@
       color: #64748b;
       padding: 2rem;
     }
+
+    .tech-list {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  padding-left: 1.5rem;
+}
+
+.tech-list li {
+  margin-bottom: 1rem;
+}
   </style>
 </head>
 <body>
@@ -116,8 +126,9 @@
               <div class="icon-box mb-3"><i class="bi bi-lightbulb-fill"></i></div>
               <h2 class="h3 fw-bold text-primary mb-3">Solution Overview</h2>
               <p class="text-secondary mb-0">
-                Our solution will be a pillbox with four rectangular containers, where each container holds one type of pill. There will be five LEDs and a button placed on the front face of each container. A PCB will be placed underneath all of the containers and will allow the pillbox to connect to Wi-Fi and Bluetooth. An app will communicate to and from the PCB so users can set medication schedules. When a scheduled time is reached, the corresponding number of LEDs under the correct pill container will light up. The app will also send a phone notification when the time is reached. Once the user presses the button for the correct pill, the lights will turn off and the app will acknowledge that the medication was taken. The app will also include incentive systems such as daily streaks, making medication management feel more rewarding instead of just repetitive.
-              </p>
+                Our solution is a smart pillbox with four pill containers, each equipped with LEDs and a button. 
+                A PCB underneath connects the system to Wi-Fi and Bluetooth, allowing a mobile app to manage medication schedules, send reminders, light the correct container, and record when pills are taken. 
+                The app also uses features like daily streaks to encourage consistency.              </p>
             </div>
           </div>
         </div>
@@ -139,22 +150,22 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
-          <div class="card section-card bg-white h-100">
-            <div class="card-body p-4 p-lg-5">
-              <div class="icon-box mb-3"><i class="bi bi-list-ul"></i></div>
-              <h2 class="h3 fw-bold text-primary mb-3">What the Technology Will Do</h2>
-              <ul class="list-group list-group-flush">
-                <li> Store four different pill types in separate rectangular containers.</li>
-                <li> Use LEDs to indicate which pill container should be accessed at the scheduled time.</li>
-                <li> Send schedule-based reminders through the connected mobile app.</li>
-                <li> Detect button presses to confirm the correct medication was taken.</li>
-                <li> Track medication-taking behavior and reward consistency with features such as daily streaks.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+       <div class="col-lg-6">
+  <div class="card section-card bg-white h-100">
+    <div class="card-body p-4 p-lg-5 d-flex flex-column">
+      <div class="icon-box mb-3"><i class="bi bi-list-ul"></i></div>
+      <h2 class="h3 fw-bold text-primary mb-3">What the Technology Will Do</h2>
+
+      <ul class="tech-list text-dark mb-0 flex-grow-1">
+        <li>Store four different pill types in separate rectangular containers.</li>
+        <li>Use LEDs to indicate which pill container should be accessed at the scheduled time.</li>
+        <li>Send schedule-based reminders through the connected mobile app.</li>
+        <li>Detect button presses to confirm the correct medication was taken.</li>
+        <li>Track medication-taking behavior and reward consistency with features such as daily streaks.</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
       <div class="card section-card bg-white mt-4">
         <div class="card-body p-4 p-lg-5">
