@@ -50,6 +50,24 @@
     .section-title {
       font-weight: 700;
     }
+
+    .hero-description {
+      color: #374151;
+      font-size: 1.2rem;
+      max-width: 700px;
+    }
+
+    .page-link-card {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .page-link-card:hover .page-card {
+      transform: translateY(-4px);
+      transition: 0.2s ease;
+      box-shadow: 0 0.8rem 2rem rgba(15, 23, 42, 0.12);
+    }
   </style>
 </head>
 <body>
@@ -87,12 +105,13 @@
             Final Project Proposal Website Homepage
           </span>
           <h1 class="display-4 fw-bold mb-3">Welcome to Our ECE 196 Project Website</h1>
-          <p class="lead text-secondary mb-4">
-            This is the homepage for our ECE 196 final project proposal. You can use the navigation links to explore the different sections.
+          <p class="lead hero-description mb-4">
+            Explore the major parts of our final project proposal through dedicated sections for the team,
+            the problem being addressed, the proposed solution, and the project milestones.
           </p>
           <div class="d-flex flex-wrap gap-3">
-            <a href="team.html" class="btn btn-primary btn-lg px-4">Explore Website</a>
-            <a href="#pages" class="btn btn-outline-secondary btn-lg px-4">View Pages</a>
+            <a href="#sections" class="btn btn-primary btn-lg px-4">Explore Sections</a>
+            <a href="team.html" class="btn btn-outline-secondary btn-lg px-4">Start with Team</a>
           </div>
         </div>
 
@@ -100,36 +119,153 @@
           <div class="card hero-card bg-white">
             <div class="card-body p-4 p-lg-5">
               <h2 class="h4 fw-bold mb-3">Website Structure</h2>
-<ul class="list-group list-group-flush">
-  <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
-    <span>Home</span>
-    <a href="index.html" class="badge text-bg-primary rounded-pill text-decoration-none px-3 py-2">
-      Current
-    </a>
-  </li>
-  <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
-    <span>Team</span>
-    <a href="team.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
-      Page
-    </a>
-  </li>
-  <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
-    <span>Problem</span>
-    <a href="problem.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
-      Page
-    </a>
-  </li>
-  <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
-    <span>Solution</span>
-    <a href="solution.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
-      Page
-    </a>
-  </li>
-  <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
-    <span>Milestones</span>
-    <a href="milestones.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
-      Page
-    </a>
-  </li>
-</ul>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                  <span>Home</span>
+                  <a href="index.html" class="badge text-bg-primary rounded-pill text-decoration-none px-3 py-2">
+                    Current
+                  </a>
+                </li>
+                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                  <span>Team</span>
+                  <a href="team.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
+                    Click to View
+                  </a>
+                </li>
+                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                  <span>Problem</span>
+                  <a href="problem.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
+                    Click to View
+                  </a>
+                </li>
+                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                  <span>Solution</span>
+                  <a href="solution.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
+                    Click to View
+                  </a>
+                </li>
+                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                  <span>Milestones</span>
+                  <a href="milestones.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
+                    Click to View
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="sections" class="py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Project Sections</h2>
+          <p class="text-secondary mb-0">
+            Each section below links to its own page with detailed proposal content.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <a href="team.html" class="page-link-card">
+              <div class="card page-card h-100 bg-white">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="icon-circle mb-3"><i class="bi bi-people-fill"></i></div>
+                  <h3 class="h5 fw-bold">Team</h3>
+                  <p class="text-secondary flex-grow-1">
+                    Meet the project members, learn their roles, and see how responsibilities are divided across the team.
+                  </p>
+                  <span class="btn btn-outline-primary mt-2">Go to Team</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <a href="problem.html" class="page-link-card">
+              <div class="card page-card h-100 bg-white">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="icon-circle mb-3"><i class="bi bi-exclamation-circle-fill"></i></div>
+                  <h3 class="h5 fw-bold">Problem</h3>
+                  <p class="text-secondary flex-grow-1">
+                    Understand the problem definition, why it matters, and what existing solutions currently do poorly.
+                  </p>
+                  <span class="btn btn-outline-primary mt-2">Go to Problem</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <a href="solution.html" class="page-link-card">
+              <div class="card page-card h-100 bg-white">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="icon-circle mb-3"><i class="bi bi-cpu-fill"></i></div>
+                  <h3 class="h5 fw-bold">Solution</h3>
+                  <p class="text-secondary flex-grow-1">
+                    Review the proposed design, technology stack, system behavior, and supporting diagrams for the project.
+                  </p>
+                  <span class="btn btn-outline-primary mt-2">Go to Solution</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <a href="milestones.html" class="page-link-card">
+              <div class="card page-card h-100 bg-white">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="icon-circle mb-3"><i class="bi bi-calendar-check-fill"></i></div>
+                  <h3 class="h5 fw-bold">Milestones</h3>
+                  <p class="text-secondary flex-grow-1">
+                    Track the project timeline, key deliverables, and planned progress throughout the development schedule.
+                  </p>
+                  <span class="btn btn-outline-primary mt-2">Go to Milestones</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="card info-card bg-white overflow-hidden">
+          <div class="row g-0">
+            <div class="col-lg-6 p-4 p-lg-5 border-end">
+              <h2 class="h3 fw-bold mb-3">Purpose of the Homepage</h2>
+              <p class="text-secondary mb-0">
+                This homepage serves as a clean landing page for the proposal website. It introduces the project and
+                directs visitors to the dedicated pages where the actual required content is organized in detail.
+              </p>
+            </div>
+            <div class="col-lg-6 p-4 p-lg-5 bg-light">
+              <h3 class="h5 fw-bold mb-3">What this page includes</h3>
+              <ul class="text-secondary mb-0">
+                <li class="mb-2">Project title and welcome section</li>
+                <li class="mb-2">Short description under the hero heading</li>
+                <li class="mb-2">Clickable navigation links</li>
+                <li class="mb-2">Separate section cards for each page</li>
+                <li class="mb-0">Consistent Bootstrap layout and light styling</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-top bg-white py-4 mt-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
+      <p class="mb-0 text-secondary">ECE 196 Final Project Proposal</p>
+      <p class="mb-0 text-secondary">Home • Team • Problem • Solution • Milestones</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
