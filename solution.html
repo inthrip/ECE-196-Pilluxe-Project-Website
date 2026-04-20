@@ -105,4 +105,181 @@
         This page presents the proposed design, the main technical approach, and the overall system structure. Replace the placeholder text with your actual project solution.
       </p>
     </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12">
+          <div class="card section-card bg-white">
+            <div class="card-body p-4 p-lg-5">
+              <div class="icon-box mb-3"><i class="bi bi-lightbulb-fill"></i></div>
+              <h2 class="h3 fw-bold text-primary mb-3">Solution Overview</h2>
+              <p class="text-secondary mb-0">
+                Our solution will be a pillbox with four rectangular containers, where each container holds one type of pill. There will be five LEDs and a button placed on the front face of each container. A PCB will be placed underneath all of the containers and will allow the pillbox to connect to Wi-Fi and Bluetooth. An app will communicate to and from the PCB so users can set medication schedules. When a scheduled time is reached, the corresponding number of LEDs under the correct pill container will light up. The app will also send a phone notification when the time is reached. Once the user presses the button for the correct pill, the lights will turn off and the app will acknowledge that the medication was taken. The app will also include incentive systems such as daily streaks, making medication management feel more rewarding instead of just repetitive.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-1">
+        <div class="col-lg-6">
+          <div class="card section-card bg-white h-100">
+            <div class="card-body p-4 p-lg-5">
+              <div class="icon-box mb-3"><i class="bi bi-pencil-square"></i></div>
+              <h2 class="h3 fw-bold mb-3">Quality Sketch or Draft CAD</h2>
+              <p class="text-secondary mb-3">
+                Include a concept sketch, enclosure draft, or CAD image that shows what the system or product is expected to look like.
+              </p>
+              <div class="diagram-box">
+                Insert sketch, concept drawing, or draft CAD image here.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card section-card bg-white h-100">
+            <div class="card-body p-4 p-lg-5">
+              <div class="icon-box mb-3"><i class="bi bi-list-ul"></i></div>
+              <h2 class="h3 fw-bold text-primary mb-3">What the Technology Will Do</h2>
+              <p class="text-secondary mb-3">
+                Use short bullet points to explain the core system behavior.
+              </p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item px-0">Store four different pill types in separate rectangular containers.</li>
+                <li class="list-group-item px-0">Use LEDs to indicate which pill container should be accessed at the scheduled time.</li>
+                <li class="list-group-item px-0">Send schedule-based reminders through the connected mobile app.</li>
+                <li class="list-group-item px-0">Detect button presses to confirm the correct medication was taken.</li>
+                <li class="list-group-item px-0">Track medication-taking behavior and reward consistency with features such as daily streaks.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card section-card bg-white mt-4">
+        <div class="card-body p-4 p-lg-5">
+          <div class="icon-box mb-3"><i class="bi bi-cpu-fill"></i></div>
+          <h2 class="h3 fw-bold text-primary mb-4">Technological Aspects of the Solution</h2>
+          <p class="text-secondary mb-4">
+            The solution combines hardware, embedded electronics, wireless communication, and app-based interaction to make medication scheduling more organized and interactive.
+          </p>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="highlight-box">
+                <h3 class="h5 fw-bold">Hardware</h3>
+                <ul class="text-secondary mb-0 ps-3">
+                  <li>Four rectangular pill containers</li>
+                  <li>Five LEDs and one button on each container face</li>
+                  <li>Physical enclosure for organized medication storage</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="highlight-box">
+                <h3 class="h5 fw-bold">PCB / Connectivity</h3>
+                <ul class="text-secondary mb-0 ps-3">
+                  <li>PCB mounted underneath the containers</li>
+                  <li>Wi-Fi connectivity for app communication</li>
+                  <li>Bluetooth connectivity for direct device interaction</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="highlight-box">
+                <h3 class="h5 fw-bold">Software / App Logic</h3>
+                <ul class="text-secondary mb-0 ps-3">
+                  <li>User-configured medication schedules</li>
+                  <li>Phone notifications when medication is due</li>
+                  <li>Button-press confirmation and streak-based incentives</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="col-md-4">
+              <div class="highlight-box">
+                <h3 class="h5 fw-bold">Microcontroller / Processing</h3>
+                <p class="text-secondary mb-0">
+                  Explain what microcontroller, processor, or computing unit the system uses and why it is appropriate.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="highlight-box">
+                <h3 class="h5 fw-bold">Software Logic</h3>
+                <p class="text-secondary mb-0">
+                  Describe the code, decision logic, control algorithm, communication flow, or app interface that enables the system to function.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card section-card bg-white mt-4">
+        <div class="card-body p-4 p-lg-5">
+          <div class="icon-box mb-3"><i class="bi bi-diagram-3-fill"></i></div>
+          <h2 class="h3 fw-bold mb-3">Block Diagram of Technology</h2>
+          <p class="text-secondary mb-4">
+            Include an overall system block diagram. This should show the relationship between inputs, the microcontroller or processing unit, and the outputs or software components.
+          </p>
+          <div class="diagram-box">
+            Insert block diagram here. Include the microcontroller and other relevant hardware and software subsystems.
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-1">
+        <div class="col-lg-6">
+          <div class="card section-card bg-white h-100">
+            <div class="card-body p-4 p-lg-5">
+              <h2 class="h4 fw-bold mb-3">What this page should include</h2>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item px-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>Solution overview</li>
+                <li class="list-group-item px-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>Quality sketch or draft CAD</li>
+                <li class="list-group-item px-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>Bullet points describing what the technology will do</li>
+                <li class="list-group-item px-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>Technical aspects of the solution</li>
+                <li class="list-group-item px-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>Block diagram of technology</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card section-card bg-white h-100">
+            <div class="card-body p-4 p-lg-5">
+              <h2 class="h4 fw-bold mb-3">Writing Guidance</h2>
+              <p class="text-secondary mb-3">
+                Be specific. Do not just say the system is “smart” or “efficient.” Explain what components do, how data moves through the system, and what the user actually gets from the design.
+              </p>
+              <p class="mb-0">
+                The solution page should make the project feel technically real, not hypothetical.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center my-4">
+        <a href="index.html" class="btn btn-primary rounded-pill px-4">
+          <i class="bi bi-house-door-fill me-2"></i>Back to Home
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-top bg-white py-4 mt-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
+      <p class="mb-0 text-secondary">ECE 196 Final Project Proposal</p>
+      <p class="mb-0 text-secondary">Home • Team • Problem • Solution • Milestones</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
