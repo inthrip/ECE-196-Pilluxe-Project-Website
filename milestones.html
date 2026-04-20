@@ -65,6 +65,59 @@
     .milestone-list li {
       margin-bottom: 1rem;
     }
+
+    .milestone-timeline {
+  position: relative;
+  margin-left: 0.75rem;
+  padding-left: 2rem;
+}
+
+.milestone-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.35rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #0d6efd;
+  opacity: 0.2;
+  border-radius: 999px;
+}
+
+.milestone-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.milestone-item:last-child {
+  margin-bottom: 0;
+}
+
+.milestone-item::before {
+  content: "";
+  position: absolute;
+  left: -1.9rem;
+  top: 1.4rem;
+  width: 14px;
+  height: 14px;
+  background: #0d6efd;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.highlight-box h3 {
+  color: #0d6efd;
+}
+
+.highlight-box {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlight-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.75rem 1.5rem rgba(15, 23, 42, 0.08);
+}
   </style>
 </head>
 <body>
@@ -117,7 +170,7 @@
         <div class="card-body p-4 p-lg-5">
           <div class="icon-box mb-3"><i class="bi bi-clipboard-data-fill"></i></div>
           <h2 class="h3 fw-bold text-primary mb-3">Testable Hypothesis</h2>
-          <p class="text-secondary mb-0">
+          <p class="lead text-dark mb-3 fw-bold" style="font-size: 1.25rem;">
             When users utilize this device to assist in taking medication, reminders remove the constant memorization and the incentivization system makes the act of taking feel rewarding rather than tedious; this ultimately improves medication adherence rates among users.
           </p>
         </div>
@@ -139,7 +192,7 @@
   </div>
 </div>
 
-    <div class="card section-card bg-white mb-4">
+   <div class="card section-card bg-white mb-4">
   <div class="card-body p-4 p-lg-5">
     <div class="icon-box mb-3"><i class="bi bi-calendar-check-fill"></i></div>
     <h2 class="h3 fw-bold text-primary mb-3">Milestones</h2>
@@ -147,9 +200,9 @@
       Each milestone is written as a concrete deliverable with a clear outcome.
     </p>
 
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="highlight-box h-100">
+    <div class="milestone-timeline">
+      <div class="milestone-item">
+        <div class="highlight-box">
           <span class="badge text-bg-primary rounded-pill mb-3 px-3 py-2">Milestone 1</span>
           <h3 class="h5 fw-bold mb-2">PCB and Connectivity</h3>
           <p class="text-secondary mb-0">
@@ -158,8 +211,8 @@
         </div>
       </div>
 
-      <div class="col-md-6">
-        <div class="highlight-box h-100">
+      <div class="milestone-item">
+        <div class="highlight-box">
           <span class="badge text-bg-primary rounded-pill mb-3 px-3 py-2">Milestone 2</span>
           <h3 class="h5 fw-bold mb-2">App Communication</h3>
           <p class="text-secondary mb-0">
@@ -168,8 +221,8 @@
         </div>
       </div>
 
-      <div class="col-md-6">
-        <div class="highlight-box h-100">
+      <div class="milestone-item">
+        <div class="highlight-box">
           <span class="badge text-bg-primary rounded-pill mb-3 px-3 py-2">Milestone 3</span>
           <h3 class="h5 fw-bold mb-2">CAD and 3D Printing</h3>
           <p class="text-secondary mb-0">
@@ -178,8 +231,8 @@
         </div>
       </div>
 
-      <div class="col-md-6">
-        <div class="highlight-box h-100">
+      <div class="milestone-item">
+        <div class="highlight-box">
           <span class="badge text-bg-primary rounded-pill mb-3 px-3 py-2">Milestone 4</span>
           <h3 class="h5 fw-bold mb-2">App Incentive Features</h3>
           <p class="text-secondary mb-0">
@@ -188,8 +241,8 @@
         </div>
       </div>
 
-      <div class="col-md-6">
-        <div class="highlight-box h-100">
+      <div class="milestone-item">
+        <div class="highlight-box">
           <span class="badge text-bg-light border text-dark rounded-pill mb-3 px-3 py-2">Optional</span>
           <h3 class="h5 fw-bold mb-2">Progress Tracking</h3>
           <p class="text-secondary mb-0">
@@ -198,8 +251,8 @@
         </div>
       </div>
 
-      <div class="col-md-6">
-        <div class="highlight-box h-100">
+      <div class="milestone-item">
+        <div class="highlight-box">
           <span class="badge text-bg-primary rounded-pill mb-3 px-3 py-2">Final Milestone</span>
           <h3 class="h5 fw-bold mb-2">Testing and Evaluation</h3>
           <p class="text-secondary mb-0">
