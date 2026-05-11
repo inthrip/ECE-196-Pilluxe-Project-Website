@@ -174,9 +174,9 @@
               <h2 class="h3 fw-bold text-primary mb-3">Design Choices</h2>
               <ul class="design-list text-dark fw-semibold">
                 <li>The PCB centralizes control of LEDs and buttons so the pillbox hardware stays organized and easier to wire.</li>
-                <li>Wireless support allows the board to communicate with the mobile app for schedules, reminders, and tracking.</li>
+                <li>BLE support allows the board to communicate with the mobile app for schedules, reminders, and tracking.</li>
                 <li>Component placement is arranged to support a compact footprint that can fit underneath the pill containers.</li>
-                <li>The board is designed to separate logic, power, and user input connections for cleaner debugging and integration.</li>
+                <li>IMU module informs when device is actually in use, optimizing power usage.</li>
               </ul>
             </div>
           </div>
@@ -188,8 +188,8 @@
               <div class="icon-box mb-3"><i class="bi bi-lightning-charge-fill"></i></div>
               <h2 class="h3 fw-bold text-primary mb-3">Functionality</h2>
               <ul class="design-list text-dark fw-semibold">
-                <li>Receives medication schedule data from the app through the communication module or controller.</li>
-                <li>Activates the correct LEDs to guide the user to the correct pill container at the scheduled time.</li>
+                <li>Receives medication schedule data from the app through BLE to the microcontroller.</li>
+                <li>Activates the correct LEDs to guide the user take the correct amount of pills from the correct pill container at the scheduled time.</li>
                 <li>Reads button presses to confirm that the correct medication was accessed and taken.</li>
                 <li>Sends status updates back to the app so reminders, logs, and streak tracking stay synchronized.</li>
               </ul>
