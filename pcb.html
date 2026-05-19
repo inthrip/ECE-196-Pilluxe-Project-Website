@@ -3,216 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PCB | ECE 196 Final Project Proposal</title>
-  <link rel="icon" type="image/jpg" href="favicon.jpg">
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    rel="stylesheet"
-  />
-  <style>
-    body {
-      background: #f8f9fc;
-      color: #1f2937;
-    }
-
-    .page-hero {
-      background: linear-gradient(135deg, #eaf4ff 0%, #f8f9fc 55%, #eef2ff 100%);
-      padding: 80px 0 60px;
-    }
-
-    .section-card {
-      border: none;
-      border-radius: 1.25rem;
-      box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.08);
-    }
-
-    .icon-box {
-      width: 56px;
-      height: 56px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 1rem;
-      background: rgba(13, 110, 253, 0.1);
-      color: #0d6efd;
-      font-size: 1.35rem;
-    }
-
-    .pcb-image {
-      width: 100%;
-      height: 320px;
-      object-fit: contain;
-      background: #ffffff;
-      border: 1px solid #dee2e6;
-      border-radius: 1rem;
-      padding: 0.75rem;
-    }
-
-    .highlight-box {
-      border-radius: 1rem;
-      background: #f8f9fa;
-      border: 1px solid #e9ecef;
-      padding: 1.25rem;
-      height: 100%;
-    }
-
-    .design-list {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      padding-left: 1.5rem;
-      margin-bottom: 0;
-    }
-
-    .design-list li {
-      margin-bottom: 0.9rem;
-    }
-
-    .design-list li:last-child {
-      margin-bottom: 0;
-    }
-  </style>
+  <title>PCB — ECE 196 Final Project Proposal</title>
+ 
+  <link rel="icon" type="image/jpg" href="favicon.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pcb.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="index.html">ECE 196 Proposal</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNav"
-        aria-controls="mainNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-          <li class="nav-item"><a class="nav-link" href="problem.html">Problem</a></li>
-          <li class="nav-item"><a class="nav-link" href="solution.html">Solution</a></li>
-          <li class="nav-item"><a class="nav-link" href="milestones.html">Milestones</a></li>
-          <li class="nav-item"><a class="nav-link" href="pcb.html">PCB</a></li>
-          <li class="nav-item"><a class="nav-link" href="video_poster.html">Video/Poster</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <header class="page-hero">
-    <div class="container text-center">
-      <span class="badge rounded-pill text-bg-light border text-primary px-3 py-2 mb-3">
-        PCB Page
-      </span>
-      <h1 class="display-5 fw-bold mb-3">PCB Design and Hardware Views</h1>
-      <p class="lead text-secondary mx-auto fw-bold" style="max-width: 780px;">
-        This page shows the electrical design of the pillbox system through the schematic, the PCB board layout, and the 3D board view. It also highlights the major design choices and intended hardware functionality.
-      </p>
-    </div>
+ 
+  <header>
+    <a href="index.html">ECE 196 / Proposal</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="problem.html">Problem</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="milestones.html">Milestones</a></li>
+        <li><a href="pcb.html" class="current">PCB</a></li>
+        <li><a href="video_poster.html">Video / Poster</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <main class="py-5">
-    <div class="card section-card bg-white mb-4">
-  <div class="card-body p-4 p-lg-5">
-    <div class="icon-box mb-3"><i class="bi bi-diagram-2-fill"></i></div>
-    <h2 class="h3 fw-bold text-primary mb-3">Schematic</h2>
-    <p class="text-secondary mb-4">
-      Electrical connectivity between the controller, power, LEDs, and button inputs.
-    </p>
-    <img
-      src="schematic.png"
-      alt="PCB schematic"
-      class="pcb-image"
-      style="height: 560px;"
-    />
-  </div>
-</div>
-
-<div class="card section-card bg-white mb-4">
-  <div class="card-body p-4 p-lg-5">
-    <div class="icon-box mb-3"><i class="bi bi-grid-3x3-gap-fill"></i></div>
-    <h2 class="h3 fw-bold text-primary mb-3">Board Layout</h2>
-    <p class="text-secondary mb-4">
-      Physical component placement and routing on the PCB for the pillbox hardware.
-    </p>
-    <img
-      src="board.jpeg"
-      alt="PCB board layout"
-      class="pcb-image"
-      style="height: 560px;"
-    />
-  </div>
-</div>
-
-<div class="card section-card bg-white mb-4">
-  <div class="card-body p-4 p-lg-5">
-    <div class="icon-box mb-3"><i class="bi bi-badge-3d-fill"></i></div>
-    <h2 class="h3 fw-bold text-primary mb-3">3D View</h2>
-    <p class="text-secondary mb-4">
-      Rendered view of the assembled board to visualize spacing, height, and packaging.
-    </p>
-    <img
-      src="3D_view.jpeg"
-      alt="PCB 3D view"
-      class="pcb-image"
-      style="height: 560px;"
-    />
-  </div>
-</div>
-
-      <div class="row g-4 mt-1">
-        <div class="col-lg-6">
-          <div class="card section-card bg-white h-100">
-            <div class="card-body p-4 p-lg-5">
-              <div class="icon-box mb-3"><i class="bi bi-tools"></i></div>
-              <h2 class="h3 fw-bold text-primary mb-3">Design Choices</h2>
-              <ul class="design-list text-dark fw-semibold">
-                <li>The PCB centralizes control of LEDs and buttons so the pillbox hardware stays organized and easier to wire.</li>
-                <li>BLE support allows the board to communicate with the mobile app for schedules, reminders, and tracking.</li>
-                <li>Component placement is arranged to support a compact footprint that can fit underneath the pill containers.</li>
-                <li>IMU module informs when device is actually in use, optimizing power usage.</li>
-              </ul>
-            </div>
-          </div>
+ 
+  <main>
+ 
+    <!-- ============ PAGE INTRO ============ -->
+    <section class="page-intro">
+      <span class="eyebrow">Hardware design</span>
+      <h1>The brains of the pillbox.</h1>
+      <p class="lede">
+        The hardware that makes the pillbox actually work, seen three ways &mdash; as a schematic, as a board layout, and as a 3D render &mdash; followed by the design rationale behind it.
+      </p>
+    </section>
+ 
+    <!-- ============ 01 — SCHEMATIC ============ -->
+    <section data-num="01">
+      <span class="label">Schematic</span>
+      <h2>How everything is wired.</h2>
+      <p class="section-intro">
+        Electrical connectivity between the microcontroller, power supply, LEDs, and button inputs.
+      </p>
+ 
+      <figure class="tech-figure">
+        <div class="frame" data-label="Schematic placeholder">
+          <img src="images/schematic.png" alt="PCB schematic" onerror="this.style.display='none'" />
         </div>
-
-        <div class="col-lg-6">
-          <div class="card section-card bg-white h-100">
-            <div class="card-body p-4 p-lg-5">
-              <div class="icon-box mb-3"><i class="bi bi-lightning-charge-fill"></i></div>
-              <h2 class="h3 fw-bold text-primary mb-3">Functionality</h2>
-              <ul class="design-list text-dark fw-semibold">
-                <li>Receives medication schedule data from the app through BLE to the microcontroller.</li>
-                <li>Activates the correct LEDs to guide the user take the correct amount of pills from the correct pill container at the scheduled time.</li>
-                <li>Reads button presses to confirm that the correct medication was accessed and taken.</li>
-                <li>Sends status updates back to the app so reminders, logs, and streak tracking stay synchronized.</li>
-              </ul>
-            </div>
-          </div>
+        <figcaption>Figure 01 &mdash; Full PCB schematic</figcaption>
+      </figure>
+    </section>
+ 
+    <!-- ============ 02 — BOARD LAYOUT ============ -->
+    <section data-num="02">
+      <span class="label">Board layout</span>
+      <h2>The physical arrangement.</h2>
+      <p class="section-intro">
+        Physical component placement and routing on the PCB &mdash; sized to fit underneath the pill containers.
+      </p>
+ 
+      <figure class="tech-figure">
+        <div class="frame" data-label="Board layout placeholder">
+          <img src="images/pcb_board.jpeg" alt="PCB board layout" onerror="this.style.display='none'" />
+        </div>
+        <figcaption>Figure 02 &mdash; PCB board layout</figcaption>
+      </figure>
+    </section>
+ 
+    <!-- ============ 03 — 3D VIEW ============ -->
+    <section data-num="03">
+      <span class="label">3D view</span>
+      <h2>Assembled, in three dimensions.</h2>
+      <p class="section-intro">
+        Rendered view of the assembled board, used to visualize spacing, height clearance, and how it'll sit inside the enclosure.
+      </p>
+ 
+      <figure class="tech-figure">
+        <div class="frame" data-label="3D render placeholder">
+          <img src="images/pcb_3D.jpeg" alt="PCB 3D view" onerror="this.style.display='none'" />
+        </div>
+        <figcaption>Figure 03 &mdash; 3D render of assembled board</figcaption>
+      </figure>
+    </section>
+ 
+    <!-- ============ 04 — DESIGN RATIONALE ============ -->
+    <section data-num="04">
+      <span class="label">Design rationale</span>
+      <h2>Why we made these choices.</h2>
+ 
+      <div class="rationale">
+        <div class="rationale-col">
+          <h4>Design choices</h4>
+          <ul>
+            <li>The PCB centralizes control of LEDs and buttons so the pillbox hardware stays organized and easier to wire.</li>
+            <li>BLE support lets the board communicate with the mobile app for schedules, reminders, and tracking.</li>
+            <li>Component placement is arranged for a compact footprint that fits underneath the pill containers.</li>
+            <li>An IMU module detects when the device is actually in use, optimizing power usage during long idle stretches.</li>
+          </ul>
+        </div>
+ 
+        <div class="rationale-col">
+          <h4>Functionality</h4>
+          <ul>
+            <li>Receives medication schedule data from the app via BLE to the microcontroller.</li>
+            <li>Activates the correct LEDs to guide users to the right pill container at the scheduled time.</li>
+            <li>Reads button presses to confirm that the correct medication was accessed and taken.</li>
+            <li>Sends status updates back to the app so reminders, logs, and streak tracking stay synchronized.</li>
+          </ul>
         </div>
       </div>
-
-      <div class="text-center my-4">
-        <a href="index.html" class="btn btn-primary rounded-pill px-4">
-          <i class="bi bi-house-door-fill me-2"></i>Back to Home
-        </a>
-      </div>
+    </section>
+ 
+    <!-- ============ BACK LINK ============ -->
+    <div class="page-end">
+      <a href="index.html" class="back-link">&larr; Back to home</a>
     </div>
+ 
   </main>
-
-  <footer class="border-top bg-white py-4 mt-4">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
-      <p class="mb-0 text-secondary">ECE 196 Final Project Proposal</p>
-      <p class="mb-0 text-secondary">Home • Team • Problem • Solution • Milestones • PCB • Video/Poster</p>
-    </div>
+ 
+  <footer>
+    <span>ECE 196 · Final Project Proposal</span>
+    <span>UC San Diego · 2026</span>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ 
 </body>
 </html>
