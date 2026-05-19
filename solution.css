@@ -228,7 +228,7 @@
  
 .cad-figure .frame {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 19 / 10;
   background: var(--bg);
   border: 1px solid var(--rule);
   overflow: hidden;
