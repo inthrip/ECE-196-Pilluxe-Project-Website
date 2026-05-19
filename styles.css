@@ -331,7 +331,7 @@ main > h1:first-child {
 }
  
 .member--reverse .member-photo { grid-column: 2; grid-row: 2;}
-.member--reverse .member-info  { grid-column: 2; grid-row: 1;}
+.member--reverse .member-info  { grid-column: 1; grid-row: 2;}
  
 .member-photo { margin: 0; }
 .member-photo .frame {
