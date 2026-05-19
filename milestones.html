@@ -3,277 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Milestones | ECE 196 Final Project Proposal</title>
-  <link rel="icon" type="image/jpg" href="favicon.jpg">
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    rel="stylesheet"
-  />
-  <style>
-    body {
-      background: #f8f9fc;
-      color: #1f2937;
-    }
-
-    .page-hero {
-      background: linear-gradient(135deg, #eaf4ff 0%, #f8f9fc 55%, #eef2ff 100%);
-      padding: 80px 0 60px;
-    }
-
-    .section-card {
-      border: none;
-      border-radius: 1.25rem;
-      box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.08);
-    }
-
-    .icon-box {
-      width: 56px;
-      height: 56px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 1rem;
-      background: rgba(13, 110, 253, 0.1);
-      color: #0d6efd;
-      font-size: 1.35rem;
-    }
-
-    .highlight-box {
-      border-radius: 1rem;
-      background: #f8f9fa;
-      border: 1px solid #e9ecef;
-      padding: 1.25rem;
-      height: 100%;
-    }
-
-    .timeline-placeholder {
-      min-height: 220px;
-      border: 2px dashed #cbd5e1;
-      border-radius: 1rem;
-      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #64748b;
-      padding: 2rem;
-    }
-
-    .milestone-list li {
-      margin-bottom: 1rem;
-    }
-
-    .milestone-timeline {
-  position: relative;
-  margin-left: 0.75rem;
-  padding-left: 2rem;
-}
-
-.milestone-timeline::before {
-  content: "";
-  position: absolute;
-  left: 0.35rem;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: #0d6efd;
-  opacity: 0.2;
-  border-radius: 999px;
-}
-
-.milestone-item {
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-
-.milestone-item:last-child {
-  margin-bottom: 0;
-}
-
-.milestone-item::before {
-  content: "";
-  position: absolute;
-  left: -1.9rem;
-  top: 1.4rem;
-  width: 14px;
-  height: 14px;
-  background: #0d6efd;
-  border: 3px solid #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
-}
-
-.highlight-box h3 {
-  color: #0d6efd;
-}
-
-.highlight-box {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.highlight-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0.75rem 1.5rem rgba(15, 23, 42, 0.08);
-}
-  </style>
+  <title>Milestones — ECE 196 Final Project Proposal</title>
+ 
+  <link rel="icon" type="image/jpg" href="favicon.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="milestones.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="index.html">ECE 196 Proposal</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNav"
-        aria-controls="mainNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-          <li class="nav-item"><a class="nav-link" href="problem.html">Problem</a></li>
-          <li class="nav-item"><a class="nav-link" href="solution.html">Solution</a></li>
-          <li class="nav-item"><a class="nav-link" href="milestones.html">Milestones</a></li>
-          <li class="nav-item"><a class="nav-link" href="pcb.html">PCB</a></li>
-          <li class="nav-item"><a class="nav-link" href="video_poster.html">Video/Poster</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <header class="page-hero">
-    <div class="container text-center">
-      <span class="badge rounded-pill text-bg-light border text-primary px-3 py-2 mb-3">
-        Milestones Page
-      </span>
-      <h1 class="display-5 fw-bold mb-3">Project Milestones and Timeline</h1>
-      <p class="lead text-secondary mx-auto fw-bold" style="max-width: 780px;">
-        This page lays out our testable hypothesis, timeline figure, and concrete deliverables for the project. Each milestone describes completion, not when work will begin.
-      </p>
-    </div>
+ 
+  <header>
+    <a href="index.html">ECE 196 / Proposal</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="problem.html">Problem</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="milestones.html" class="current">Milestones</a></li>
+        <li><a href="pcb.html">PCB</a></li>
+        <li><a href="video_poster.html">Video / Poster</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <main class="py-5">
-    <div class="container">
-      <div class="card section-card bg-white mb-4">
-        <div class="card-body p-4 p-lg-5">
-          <div class="icon-box mb-3"><i class="bi bi-clipboard-data-fill"></i></div>
-          <h2 class="h3 fw-bold text-primary mb-3">Testable Hypothesis</h2>
-          <p class="lead text-dark mb-3 fw-bold" style="font-size: 1.25rem;">
-            When users utilize this device to assist in taking medication, reminders remove the constant memorization and the incentivization system makes the act of taking feel rewarding rather than tedious; this ultimately improves medication adherence rates among users.
-          </p>
+ 
+  <main>
+ 
+    <!-- ============ PAGE INTRO ============ -->
+    <section class="page-intro">
+      <span class="eyebrow">Project timeline</span>
+      <h1>What we'll deliver, and when.</h1>
+      <p class="lede">
+        Six engineering milestones, six concrete deliverables. Each one marks completion &mdash; what we'll have done by that date, not when we'll start it.
+      </p>
+    </section>
+ 
+    <!-- ============ 01 — HYPOTHESIS ============ -->
+    <section data-num="01">
+      <span class="label">Testable hypothesis</span>
+      <h2>Can adherence feel rewarding?</h2>
+      <blockquote class="hypothesis">
+        When users rely on this device, reminders remove the burden of constant memorization, and the incentive system reframes taking medication as something rewarding rather than tedious &mdash; ultimately improving medication adherence rates.
+      </blockquote>
+    </section>
+ 
+    <!-- ============ 02 — TIMELINE FIGURE ============ -->
+    <section data-num="02">
+      <span class="label">At a glance</span>
+      <h2>Everything on one timeline.</h2>
+ 
+      <figure class="timeline-figure">
+        <div class="frame">
+          <img src="timeline.png" alt="Full project timeline figure" onerror="this.style.display='none'" />
         </div>
-      </div>
-
-      <div class="card section-card bg-white mb-4">
-  <div class="card-body p-4 p-lg-5">
-    <div class="icon-box mb-3"><i class="bi bi-bar-chart-steps"></i></div>
-    <h2 class="h3 fw-bold text-primary mb-3">Timeline Figure</h2>
-
-
-    <img
-      src="timeline.png"
-      alt="Project timeline"
-      class="img-fluid rounded-4 border"
-    />
-  </div>
-</div>
-
-   <div class="card section-card bg-white mb-4">
-  <div class="card-body p-4 p-lg-5">
-    <div class="icon-box mb-3"><i class="bi bi-calendar-check-fill"></i></div>
-    <h2 class="h3 fw-bold text-primary mb-3">Milestones</h2>
-    <div class="milestone-timeline">
-      <div class="milestone-item">
-        <div class="highlight-box">
-          <span class="badge text-bg-primary rounded-pill mb-3 px-3 py-2" style="font-size: 1.2rem;">Milestone 1 - Week 5 Friday (Completed)</span>
-          <h3 class="h5 fw-bold mb-2" style="font-size: 1.35rem;">PCB and Connectivity Completed</h3>
-          <p class="lead text-dark mb-3 fw-bold" style="font-size: 1.25rem;">
-            PCB designed with Bluetooth capabiltiies, colored LEDs, and buttons, all fully connected.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="milestone-item">
-        <div class="highlight-box">
-          <span class="badge text-bg-primary rounded-pill mb-3 px-3 py-2" style="font-size: 1.2rem;">Milestone 2 - Week 6 Friday (Completed) </span>
-          <h3 class="h5 fw-bold mb-2" style="font-size: 1.35rem;">CAD and 3D Printing Completed </h3>
-          <p class="lead text-dark mb-3 fw-bold" style="font-size: 1.25rem;">
-            CAD model finished and the pill container 3D printed with openings for LEDs and push buttons.
-          </p>
-        </div>
-      </div>
-
-      <div class="milestone-item">
-        <div class="highlight-box">
-          <span class="badge text-bg-primary rounded-pill mb-3 px-3 py-2" style="font-size: 1.2rem;">Milestone 3 - Week 7 Wednesday (Updated)</span>
-          <h3 class="h5 fw-bold mb-2" style="font-size: 1.35rem;">Software Integration Completed</h3>
-          <p class="lead text-dark mb-3 fw-bold" style="font-size: 1.25rem;">
-            Implemented software (a barebones app) that is able to communicate with the PCB and light LEDs.
-          </p>
-        </div>
-      </div>
-
-      <div class="milestone-item">
-        <div class="highlight-box">
-          <span class="badge text-bg-primary rounded-pill mb-3 px-3 py-2" style="font-size: 1.2rem;">Milestone 4 - Week 8 Friday</span>
-          <h3 class="h5 fw-bold mb-2" style="font-size: 1.35rem;">App Incentive Features Implemented</h3>
-          <p class="lead text-dark mb-3 fw-bold" style="font-size: 1.25rem;">
-            App configured with visual design, day-by-day streaks, and an incentive-based reward system.
-          </p>
-        </div>
-      </div>
-
-      <div class="milestone-item">
-        <div class="highlight-box">
-          <span class="badge text-bg-primary rounded-pill mb-3 px-3 py-2" style="font-size: 1.2rem;">Milestone 5 - Week 9 Monday (Optional) </span>
-          <h3 class="h5 fw-bold mb-2" style="font-size: 1.35rem;">Diary System Completed</h3>
-          <p class="lead text-dark mb-3 fw-bold" style="font-size: 1.25rem;">
-            Implemented diary system that enables users to track their condition while taking the medication across time.
-          </p>
-        </div>
-      </div>
-
-      <div class="milestone-item">
-        <div class="highlight-box">
-          <span class="badge text-bg-primary rounded-pill mb-3 px-3 py-2" style="font-size: 1.2rem;">Final Milestone - Week 9 Wednesday</span>
-          <h3 class="h5 fw-bold mb-2" style="font-size: 1.35rem;"> Testing and Evaluation Phase Completed</h3>
-          <p class="lead text-dark mb-3 fw-bold" style="font-size: 1.25rem;">
-            Testing completed (app used as intended) to identify flaws and evaluate whether the system reduces tedium and feels enjoyable to use.
-          </p>
-        </div>
-      </div>
+        <figcaption>Project timeline &mdash; week 5 through week 9</figcaption>
+      </figure>
+    </section>
+ 
+    <!-- ============ 03 — MILESTONES ============ -->
+    <section data-num="03">
+      <span class="label">Milestone schedule</span>
+      <h2>What completion looks like.</h2>
+ 
+      <ol class="milestones">
+        <li class="milestone milestone--done">
+          <div class="milestone-date">Wk 5 · Fri</div>
+          <div class="milestone-head">
+            <span class="milestone-num">Milestone 01</span>
+            <span class="milestone-status milestone-status--done">Completed</span>
+          </div>
+          <h3>PCB and connectivity completed.</h3>
+          <p>PCB designed with Bluetooth capabilities, colored LEDs, and buttons &mdash; all fully connected.</p>
+        </li>
+ 
+        <li class="milestone milestone--done">
+          <div class="milestone-date">Wk 6 · Fri</div>
+          <div class="milestone-head">
+            <span class="milestone-num">Milestone 02</span>
+            <span class="milestone-status milestone-status--done">Completed</span>
+          </div>
+          <h3>CAD and 3D printing completed.</h3>
+          <p>CAD model finished and the pill container 3D-printed with openings for LEDs and push buttons.</p>
+        </li>
+ 
+        <li class="milestone milestone--updated">
+          <div class="milestone-date">Wk 7 · Wed</div>
+          <div class="milestone-head">
+            <span class="milestone-num">Milestone 03</span>
+            <span class="milestone-status milestone-status--updated">Updated</span>
+          </div>
+          <h3>Software integration completed.</h3>
+          <p>A barebones app implemented that communicates with the PCB and controls the onboard LEDs.</p>
+        </li>
+ 
+        <li class="milestone">
+          <div class="milestone-date">Wk 8 · Fri</div>
+          <div class="milestone-head">
+            <span class="milestone-num">Milestone 04</span>
+          </div>
+          <h3>App incentive features implemented.</h3>
+          <p>App configured with visual design, day-by-day streaks, and an incentive-based reward system.</p>
+        </li>
+ 
+        <li class="milestone milestone--optional">
+          <div class="milestone-date">Wk 9 · Mon</div>
+          <div class="milestone-head">
+            <span class="milestone-num">Milestone 05</span>
+            <span class="milestone-status milestone-status--optional">Optional</span>
+          </div>
+          <h3>Diary system completed.</h3>
+          <p>Diary system that lets users track their condition across time, alongside their medication routine.</p>
+        </li>
+ 
+        <li class="milestone milestone--final">
+          <div class="milestone-date">Wk 9 · Wed</div>
+          <div class="milestone-head">
+            <span class="milestone-num">Final milestone</span>
+            <span class="milestone-status milestone-status--final">Final</span>
+          </div>
+          <h3>Testing and evaluation phase completed.</h3>
+          <p>Real-world testing of the app to identify flaws and evaluate whether the system actually reduces tedium and feels enjoyable to use.</p>
+        </li>
+      </ol>
+    </section>
+ 
+    <!-- ============ BACK LINK ============ -->
+    <div class="page-end">
+      <a href="index.html" class="back-link">&larr; Back to home</a>
     </div>
-  </div>
-</div>
-
-
-
-      <div class="text-center my-4">
-        <a href="index.html" class="btn btn-primary rounded-pill px-4">
-          <i class="bi bi-house-door-fill me-2"></i>Back to Home
-        </a>
-      </div>
-    </div>
+ 
   </main>
-
-  <footer class="border-top bg-white py-4 mt-4">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
-      <p class="mb-0 text-secondary">ECE 196 Final Project Proposal</p>
-      <p class="mb-0 text-secondary">Home • Team • Problem • Solution • Milestones • PCB • Video/Poster</p>
-    </div>
+ 
+  <footer>
+    <span>ECE 196 · Final Project Proposal</span>
+    <span>UC San Diego · 2026</span>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ 
 </body>
 </html>

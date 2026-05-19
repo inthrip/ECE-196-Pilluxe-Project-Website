@@ -1,0 +1,200 @@
+/* ============================================================
+   milestones.css — page-specific styles for milestones.html
+   Loaded alongside styles.css
+   ============================================================ */
+ 
+/* ---------- 01 Testable hypothesis — pull-quote ---------- */
+/* (uses base blockquote styles from styles.css) */
+ 
+.hypothesis {
+  font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+  line-height: 1.5;
+  font-weight: 300;
+  max-width: 62ch;
+  margin-top: 2rem;
+}
+ 
+/* ---------- 02 Timeline figure ---------- */
+.timeline-figure { margin-top: 2rem; }
+ 
+.timeline-figure .frame {
+  position: relative;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+  padding: 1.5rem;
+  min-height: 220px;
+  background-image:
+    repeating-linear-gradient(45deg, transparent 0 24px, rgba(0,0,0,0.012) 24px 25px);
+}
+ 
+.timeline-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 540px;
+  object-fit: contain;
+  border: none;
+  background: var(--bg);
+}
+ 
+.timeline-figure figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 0.9rem;
+}
+ 
+/* ---------- 03 Milestone list — vertical timeline ---------- */
+.milestones {
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 0 0 0 6.5rem;
+  position: relative;
+  max-width: none;
+}
+ 
+.milestone {
+  position: relative;
+  padding: 0.3rem 0 2.6rem 2.2rem;
+  border-left: 1px solid var(--rule);
+  margin: 0;
+}
+ 
+.milestone:last-child {
+  border-left-color: transparent;
+  padding-bottom: 0.3rem;
+}
+ 
+/* Date column (absolutely positioned to the left) */
+.milestone-date {
+  position: absolute;
+  left: -6.5rem;
+  top: 0.55rem;
+  width: 5.2rem;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+ 
+/* The dot on the timeline */
+.milestone::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0.6rem;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  z-index: 1;
+}
+ 
+/* Dot variations by state */
+.milestone--done::before {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.milestone--updated::before {
+  border-color: #a47128;
+}
+.milestone--optional::before {
+  border-color: var(--ink-soft);
+  border-style: dashed;
+}
+.milestone--final::before {
+  background: var(--ink);
+  border-color: var(--ink);
+  width: 15px;
+  height: 15px;
+  left: -8px;
+  top: 0.5rem;
+}
+ 
+/* Header row: milestone number + status pill */
+.milestone-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.55rem;
+}
+ 
+.milestone-num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+ 
+.milestone-status {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  line-height: 1.4;
+  border: 1px solid currentColor;
+}
+ 
+.milestone-status--done {
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.milestone-status--updated {
+  color: #a47128;
+  background: transparent;
+  border-color: #a47128;
+}
+.milestone-status--optional {
+  color: var(--ink-soft);
+  background: transparent;
+  border-color: var(--ink-soft);
+  border-style: dashed;
+}
+.milestone-status--final {
+  color: var(--bg);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+ 
+.milestone h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  line-height: 1.2;
+}
+ 
+.milestone p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 0;
+  max-width: 60ch;
+}
+ 
+/* ---------- Mobile: collapse the date column inline ---------- */
+@media (max-width: 720px) {
+  .milestones { padding-left: 1.5rem; }
+  .milestone { padding-left: 1.5rem; padding-bottom: 2.2rem; }
+  .milestone-date {
+    position: static;
+    width: auto;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+}
+ 
