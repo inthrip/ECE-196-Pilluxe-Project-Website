@@ -1,169 +1,264 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solution — ECE 196 Final Project Proposal</title>
+/* ============================================================
+   solution.css — page-specific styles for solution.html
+   Loaded alongside styles.css
+   ============================================================ */
  
-  <link rel="icon" type="image/jpg" href="favicon.jpg" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="solution.css" />
-</head>
-<body>
+/* ---------- 01 Solution overview (sketch + prose) ---------- */
+.solution-overview {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+  margin-top: 1.5rem;
+}
  
-  <header>
-    <a href="index.html">ECE 196 / Proposal</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="problem.html">Problem</a></li>
-        <li><a href="solution.html" class="current">Solution</a></li>
-        <li><a href="milestones.html">Milestones</a></li>
-        <li><a href="pcb.html">PCB</a></li>
-        <li><a href="video_poster.html">Video / Poster</a></li>
-      </ul>
-    </nav>
-  </header>
+.overview-figure { margin: 0; }
  
-  <main>
+.overview-figure .frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-alt);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+  background-image:
+    repeating-linear-gradient(45deg, transparent 0 24px, rgba(0,0,0,0.018) 24px 25px);
+}
  
-    <!-- ============ PAGE INTRO ============ -->
-    <section class="page-intro">
-      <span class="eyebrow">The solution</span>
-      <h1>What we're building.</h1>
-      <p class="lede">
-        A portable, rechargeable smart pillbox designed to make medication management feel less like a chore and more like a daily habit &mdash; with a digital incentive system to keep you going.
-      </p>
-    </section>
+.overview-figure .frame::before {
+  content: "Concept sketch";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
  
-    <!-- ============ 01 — OVERVIEW ============ -->
-    <section data-num="01">
-      <span class="label">Solution overview</span>
-      <h2>A pillbox that wants you to take your meds.</h2>
+.overview-figure img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.8rem;
+  background: var(--bg);
+  border: none;
+  z-index: 1;
+}
  
-      <div class="solution-overview">
-        <figure class="overview-figure">
-          <div class="frame">
-            <img src="pillbox_sketch.png" alt="Generated concept sketch of the smart pillbox" onerror="this.style.display='none'" />
-          </div>
-          <figcaption>Generated concept sketch</figcaption>
-        </figure>
+.overview-figure figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 0.9rem;
+}
  
-        <div class="overview-text">
-          <p class="lede">
-            Our solution is a portable, rechargeable smart pillbox with four pill containers &mdash; each equipped with LEDs and a button.
-          </p>
-          <p>
-            A PCB underneath connects the system to Wi-Fi and Bluetooth, allowing a companion mobile app to manage medication schedules, send reminders, light the correct container, and record when pills are taken. The app uses features like daily streaks to encourage long-term consistency.
-          </p>
-        </div>
-      </div>
+.overview-text .lede {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0 0 1.2rem;
+  max-width: none;
+}
  
-      <aside class="callout">
-        <span class="callout-label">A clever touch</span>
-        <p>
-          An IMU module lets the device detect when it's being grabbed or lifted &mdash; activating LEDs only when needed and conserving battery during long idle stretches.
-        </p>
-      </aside>
-    </section>
+.overview-text p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--ink);
+  max-width: 50ch;
+}
  
-    <!-- ============ 02 — CAPABILITIES ============ -->
-    <section data-num="02">
-      <span class="label">Capabilities</span>
-      <h2>What the device does.</h2>
+/* ---------- Callout (highlighted aside, e.g., IMU note) ---------- */
+.callout {
+  background: var(--bg-alt);
+  border-left: 3px solid var(--accent);
+  padding: 1.6rem 1.8rem;
+  margin: 3.5rem 0 0;
+}
  
-      <ol class="capabilities">
-        <li>Stores four different pill types in separate rectangular containers.</li>
-        <li>Uses LEDs to indicate which pill container should be accessed at the scheduled time.</li>
-        <li>Sends schedule-based reminders through the connected mobile app.</li>
-        <li>Detects button presses to confirm the correct medication was taken.</li>
-        <li>Tracks medication-taking behavior and rewards consistency with daily streaks.</li>
-        <li>Rechargeable via USB-C, with power-efficient operation through the IMU module.</li>
-      </ol>
-    </section>
+.callout-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
  
-    <!-- ============ 03 — SYSTEM BREAKDOWN ============ -->
-    <section data-num="03">
-      <span class="label">System breakdown</span>
-      <h2>Three layers, one device.</h2>
+.callout p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: none;
+}
  
-      <div class="system">
-        <div class="system-col">
-          <h4>Hardware</h4>
-          <ul>
-            <li>Four rectangular pill containers</li>
-            <li>Five LEDs and one button on each container face</li>
-            <li>Physical enclosure for organized storage</li>
-          </ul>
-        </div>
+/* ---------- 02 Capabilities (numbered editorial list) ---------- */
+.capabilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem 4rem;
+  margin-top: 2rem;
+  list-style: none;
+  padding: 0;
+  counter-reset: cap;
+  max-width: none;
+}
  
-        <div class="system-col">
-          <h4>PCB &amp; Connectivity</h4>
-          <ul>
-            <li>PCB mounted underneath the containers</li>
-            <li>Wi-Fi connectivity for app communication</li>
-            <li>Bluetooth connectivity for direct interaction</li>
-          </ul>
-        </div>
+.capabilities li {
+  counter-increment: cap;
+  position: relative;
+  padding-left: 3.5em;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0;
+  font-size: 1rem;
+}
  
-        <div class="system-col">
-          <h4>Software &amp; App Logic</h4>
-          <ul>
-            <li>User-configured medication schedules</li>
-            <li>Phone notifications when medication is due</li>
-            <li>Button confirmation and streak-based incentives</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+.capabilities li::before {
+  content: counter(cap, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
  
-    <!-- ============ 04 — ARCHITECTURE ============ -->
-    <section data-num="04">
-      <span class="label">System architecture</span>
-      <h2>How everything connects.</h2>
+/* ---------- 03 Three-column system breakdown ---------- */
+.system {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  margin-top: 2rem;
+}
  
-      <figure class="architecture">
-        <div class="frame">
-          <img src="block_diagram.png" alt="Block diagram of pillbox technology" onerror="this.style.display='none'" />
-        </div>
-        <figcaption>Block diagram &mdash; hardware, PCB, application</figcaption>
-      </figure>
-    </section>
+.system-col h4 {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+  color: var(--accent);
+  margin: 0 0 1.2rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--rule);
+}
  
-    <!-- ============ 05 — INDUSTRIAL DESIGN ============ -->
-    <section data-num="05">
-      <span class="label">Industrial design</span>
-      <h2>Draft CAD.</h2>
+.system-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+}
  
-      <div class="cad-grid">
-        <figure class="cad-figure">
-          <div class="frame">
-            <img src="CAD_1.png" alt="Draft CAD — view 1" onerror="this.style.display='none'" />
-          </div>
-          <figcaption>View 01</figcaption>
-        </figure>
+.system-col li {
+  position: relative;
+  padding-left: 1.4em;
+  margin-bottom: 0.7em;
+  line-height: 1.55;
+  color: var(--ink);
+  font-size: 0.98rem;
+}
  
-        <figure class="cad-figure">
-          <div class="frame">
-            <img src="CAD_2.png" alt="Draft CAD — view 2" onerror="this.style.display='none'" />
-          </div>
-          <figcaption>View 02</figcaption>
-        </figure>
-      </div>
-    </section>
+.system-col li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: 500;
+}
  
-    <!-- ============ BACK LINK ============ -->
-    <div class="page-end">
-      <a href="index.html" class="back-link">&larr; Back to home</a>
-    </div>
+/* ---------- 04 Architecture (block diagram) ---------- */
+.architecture { margin-top: 2rem; }
  
-  </main>
+.architecture .frame {
+  position: relative;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+  padding: 1.5rem;
+  min-height: 240px;
+  background-image:
+    repeating-linear-gradient(45deg, transparent 0 24px, rgba(0,0,0,0.012) 24px 25px);
+}
  
-  <footer>
-    <span>ECE 196 · Final Project Proposal</span>
-    <span>UC San Diego · 2026</span>
-  </footer>
+.architecture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+  border: none;
+  background: var(--bg);
+}
  
-</body>
-</html>
+.architecture figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 0.9rem;
+}
+ 
+/* ---------- 05 CAD grid (paired views) ---------- */
+.cad-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  margin-top: 2rem;
+}
+ 
+.cad-figure { margin: 0; }
+ 
+.cad-figure .frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+}
+ 
+.cad-figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.8rem;
+  border: none;
+}
+ 
+.cad-figure figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 0.8rem;
+}
+ 
+/* ---------- Mobile stacking ---------- */
+@media (max-width: 720px) {
+  .solution-overview,
+  .capabilities,
+  .system,
+  .cad-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+}
