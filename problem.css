@@ -1,0 +1,162 @@
+/* ============================================================
+   problem.css — page-specific styles for problem.html
+   Loaded alongside styles.css (which provides the foundation:
+   typography, layout, header/footer, buttons, etc.)
+   ============================================================ */
+ 
+/* ---------- Long-form prose block ---------- */
+.prose {
+  max-width: 60ch;
+  margin-inline: auto;
+}
+ 
+.prose .lede {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0 0 1.5rem;
+  max-width: none;
+}
+ 
+.prose p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--ink);
+  max-width: none;
+}
+ 
+/* ---------- Existing-solution product showcase ---------- */
+.product {
+  margin: 2.5rem 0 3rem;
+}
+ 
+.product-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-alt);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+  background-image:
+    repeating-linear-gradient(45deg, transparent 0 24px, rgba(0,0,0,0.018) 24px 25px);
+}
+ 
+.product-frame::before {
+  content: "Product image";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+ 
+.product-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: none;
+  z-index: 1;
+}
+ 
+.product-caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--rule);
+}
+ 
+.product-caption h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+ 
+.product-caption .meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+ 
+/* ---------- Pros vs Cons assessment ---------- */
+.assessment {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  margin-top: 2.5rem;
+}
+ 
+.assessment-col h4 {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+  margin: 0 0 1.2rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--rule);
+}
+ 
+.assessment-col--pros h4 { color: var(--accent); }
+.assessment-col--cons h4 { color: #9c4a3a; }
+ 
+.assessment-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+}
+ 
+.assessment-col li {
+  position: relative;
+  padding-left: 1.4em;
+  margin-bottom: 0.9em;
+  line-height: 1.6;
+  color: var(--ink);
+  font-size: 1rem;
+}
+ 
+.assessment-col li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 1.1em;
+  line-height: 1.55;
+}
+ 
+.assessment-col--pros li::before {
+  content: "+";
+  color: var(--accent);
+}
+ 
+.assessment-col--cons li::before {
+  content: "−";
+  color: #9c4a3a;
+}
+ 
+@media (max-width: 720px) {
+  .assessment {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+ 
