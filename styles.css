@@ -419,7 +419,7 @@ main > h1:first-child {
 }
  
 /* ---------- Member mobile stacking ---------- */
-@media (max-width: 640px) {
+@media (max-width: 520px) {
   .member {
     grid-template-columns: 1fr;
     gap: 2rem;
