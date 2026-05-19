@@ -3,298 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ECE 196 Final Project Proposal</title>
+  <title>ECE 196 — Final Project Proposal</title>
 
-  <link rel="icon" type="image/jpg" href="favicon.jpg">
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    rel="stylesheet"
-  />
-  <style>
-    body {
-      background: #f8f9fc;
-      color: #1f2937;
-    }
-
-    .hero-section {
-      background: linear-gradient(135deg, #eaf4ff 0%, #f8f9fc 55%, #eef2ff 100%);
-      padding: 90px 0;
-    }
-
-    .hero-card,
-    .page-card,
-    .info-card {
-      border: none;
-      border-radius: 1.25rem;
-      box-shadow: 0 0.5rem 1.5rem rgba(15, 23, 42, 0.08);
-    }
-
-    .icon-circle {
-      width: 58px;
-      height: 58px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background: rgba(13, 110, 253, 0.1);
-      color: #0d6efd;
-      font-size: 1.4rem;
-    }
-
-    .navbar-brand {
-      letter-spacing: 0.02em;
-    }
-
-    .section-title {
-      font-weight: 700;
-    }
-
-    .hero-description {
-      color: #374151;
-      font-size: 1.2rem;
-      max-width: 700px;
-    }
-
-    .page-link-card {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
-    .page-link-card:hover .page-card {
-      transform: translateY(-4px);
-      transition: 0.2s ease;
-      box-shadow: 0 0.8rem 2rem rgba(15, 23, 42, 0.12);
-    }
-  </style>
+  <link rel="icon" type="image/jpg" href="favicon.jpg" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="index.html">ECE 196 Proposal</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNav"
-        aria-controls="mainNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-          <li class="nav-item"><a class="nav-link" href="problem.html">Problem</a></li>
-          <li class="nav-item"><a class="nav-link" href="solution.html">Solution</a></li>
-          <li class="nav-item"><a class="nav-link" href="milestones.html">Milestones</a></li>
-          <li class="nav-item"><a class="nav-link" href="pcb.html">PCB</a></li>
-          <li class="nav-item"><a class="nav-link" href="video_poster.html">Video/Poster</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <header class="hero-section">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-7">
-          <span class="badge rounded-pill text-bg-light border text-primary px-3 py-2 mb-3">
-            Final Project Proposal Website Homepage
-          </span>
-          <h1 class="display-4 fw-bold mb-3">Welcome to Our ECE 196 Project Website</h1>
-          <p class="lead hero-description mb-3 fw-bold">
-            Explore our final project, where we tackle the issue of low medical nonadherence among young adults in the United States.
-            To address this, we created a smart pillbox which employs a digital incentivization system, a method already shown to be effective on young adults in other contexts.
-          </p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="#sections" class="btn btn-primary btn-lg px-4">Explore Sections</a>
-            <a href="team.html" class="btn btn-outline-secondary btn-lg px-4">Start with Team</a>
-          </div>
-        </div>
-
-        <div class="col-lg-5">
-          <div class="card hero-card bg-white">
-            <div class="card-body p-4 p-lg-5">
-              <h2 class="h4 fw-bold mb-3">Website Structure</h2>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
-                  <span>Home</span>
-                  <a href="index.html" class="badge text-bg-primary rounded-pill text-decoration-none px-3 py-2">
-                    Current
-                  </a>
-                </li>
-                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
-                  <span>Team</span>
-                  <a href="team.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
-                    Click to View
-                  </a>
-                </li>
-                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
-                  <span>Problem</span>
-                  <a href="problem.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
-                    Click to View
-                  </a>
-                </li>
-                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
-                  <span>Solution</span>
-                  <a href="solution.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
-                    Click to View
-                  </a>
-                </li>
-                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
-                  <span>Milestones</span>
-                  <a href="milestones.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
-                    Click to View
-                  </a>
-                </li>
-
-                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
-                  <span>PCB</span>
-                  <a href="pcb.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
-                    Click to View
-                  </a>
-                </li>
-                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
-                  <span>Video/Poster</span>
-                  <a href="video_poster.html" class="badge text-bg-light border rounded-pill text-decoration-none text-dark px-3 py-2">
-                    Click to View
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <header>
+    <a href="index.html">ECE 196 / Proposal</a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="current">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="problem.html">Problem</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="milestones.html">Milestones</a></li>
+        <li><a href="pcb.html">PCB</a></li>
+        <li><a href="video_poster.html">Video / Poster</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <section id="sections" class="py-5">
-      <div class="container py-4">
-        <div class="text-center mb-5">
-          <h2 class="section-title">Project Sections</h2>
-          <p class="text-secondary mb-0">
-            Each section below links to its own page with detailed proposal content.
-          </p>
-        </div>
 
-        <div class="row g-4">
-          <div class="col-md-6 col-xl-3">
-            <a href="team.html" class="page-link-card">
-              <div class="card page-card h-100 bg-white">
-                <div class="card-body p-4 d-flex flex-column">
-                  <div class="icon-circle mb-3"><i class="bi bi-people-fill"></i></div>
-                  <h3 class="h5 fw-bold">Team</h3>
-                  <p class="text-secondary flex-grow-1">
-                    Meet the project members, learn their roles, and see how responsibilities are divided across the team.
-                  </p>
-                  <span class="btn btn-outline-primary mt-2">Go to Team</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-6 col-xl-3">
-            <a href="problem.html" class="page-link-card">
-              <div class="card page-card h-100 bg-white">
-                <div class="card-body p-4 d-flex flex-column">
-                  <div class="icon-circle mb-3"><i class="bi bi-exclamation-circle-fill"></i></div>
-                  <h3 class="h5 fw-bold">Problem</h3>
-                  <p class="text-secondary flex-grow-1">
-                    Read our problem definition, understand our motivation, and see existing solutions and their limitations.
-                  </p>
-                  <span class="btn btn-outline-primary mt-2">Go to Problem</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-6 col-xl-3">
-            <a href="solution.html" class="page-link-card">
-              <div class="card page-card h-100 bg-white">
-                <div class="card-body p-4 d-flex flex-column">
-                  <div class="icon-circle mb-3"><i class="bi bi-cpu-fill"></i></div>
-                  <h3 class="h5 fw-bold">Solution</h3>
-                  <p class="text-secondary flex-grow-1">
-                    Review the proposed design, technology stack, system behavior, and supporting diagrams for the project.
-                  </p>
-                  <span class="btn btn-outline-primary mt-2">Go to Solution</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-6 col-xl-3">
-            <a href="milestones.html" class="page-link-card">
-              <div class="card page-card h-100 bg-white">
-                <div class="card-body p-4 d-flex flex-column">
-                  <div class="icon-circle mb-3"><i class="bi bi-calendar-check-fill"></i></div>
-                  <h3 class="h5 fw-bold">Milestones</h3>
-                  <p class="text-secondary flex-grow-1">
-                    View our project's expected timeline, see our planned and dated milestones for iteratively completing our project.
-                  </p>
-                  <span class="btn btn-outline-primary mt-2">Go to Milestones</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          
-          <div class="col-md-6 col-xl-3">
-            <a href="pcb.html" class="page-link-card">
-              <div class="card page-card h-100 bg-white">
-                <div class="card-body p-4 d-flex flex-column">
-                  <div class="icon-circle mb-3"><i class="bi bi-calendar-check-fill"></i></div>
-                  <h3 class="h5 fw-bold">PCB</h3>
-                  <p class="text-secondary flex-grow-1">
-                    View this project's PCB design, including the schematic, board, and 3D render, all annotated.
-                  </p>
-                  <span class="btn btn-outline-primary mt-2">Go to PCB</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          
-          <div class="col-md-6 col-xl-3">
-            <a href="video_poster.html" class="page-link-card">
-              <div class="card page-card h-100 bg-white">
-                <div class="card-body p-4 d-flex flex-column">
-                  <div class="icon-circle mb-3"><i class="bi bi-calendar-check-fill"></i></div>
-                  <h3 class="h5 fw-bold">Video/Poster</h3>
-                  <p class="text-secondary flex-grow-1">
-                    Watch the video presentation demonstrating this project and the poster summarizing it. 
-                  </p>
-                  <span class="btn btn-outline-primary mt-2">Go to Video/Poster</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-
-          
-
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-text">
+        <span class="eyebrow">Final Project · Spring 2026</span>
+        <h1>A smarter pillbox for a younger generation.</h1>
+        <p class="lede">
+          Medical nonadherence quietly costs American healthcare billions and lives. We're tackling it where the problem starts &mdash; among young adults &mdash; using a digital incentivization system already proven to change behavior.
+        </p>
+        <div class="cta-row">
+          <a href="solution.html" class="btn">Read the proposal</a>
+          <a href="team.html" class="btn btn--ghost">Meet the team</a>
         </div>
       </div>
+
+      <!--
+        HERO IMAGE: drop a file named hero-pillbox.jpg next to this HTML
+        (or change the src). Aspect ratio 4:5 looks best; portrait crop.
+        If no image exists yet, the styled placeholder shows automatically.
+      -->
+      <figure class="hero-image">
+        <div class="frame">
+          <img src="hero-pillbox.jpg" alt="Smart pillbox prototype" onerror="this.style.display='none'" />
+        </div>
+        <figcaption>Smart pillbox prototype · concept render</figcaption>
+      </figure>
     </section>
 
+    <!-- ============ PROJECT SECTIONS ============ -->
+    <section data-num="01">
+      <span class="label">Project sections</span>
+      <h2>Explore the proposal</h2>
+      <p>Each section below opens its own page with detailed proposal content.</p>
+
+      <ul class="cards">
+        <li>
+          <a href="team.html">
+            <h3>Team</h3>
+            <p>Meet the project members, learn their roles, and see how responsibilities are divided across the team.</p>
+          </a>
+        </li>
+        <li>
+          <a href="problem.html">
+            <h3>Problem</h3>
+            <p>Read our problem definition, understand our motivation, and see existing solutions and their limitations.</p>
+          </a>
+        </li>
+        <li>
+          <a href="solution.html">
+            <h3>Solution</h3>
+            <p>Review the proposed design, technology stack, system behavior, and supporting diagrams for the project.</p>
+          </a>
+        </li>
+        <li>
+          <a href="milestones.html">
+            <h3>Milestones</h3>
+            <p>View our project's expected timeline and our planned, dated milestones for iterative completion.</p>
+          </a>
+        </li>
+        <li>
+          <a href="pcb.html">
+            <h3>PCB</h3>
+            <p>View the PCB design, including the schematic, board, and 3D render &mdash; all annotated.</p>
+          </a>
+        </li>
+        <li>
+          <a href="video_poster.html">
+            <h3>Video / Poster</h3>
+            <p>Watch the video presentation demonstrating this project and the poster summarizing it.</p>
+          </a>
+        </li>
+      </ul>
+    </section>
 
   </main>
 
-  <footer class="border-top bg-white py-4 mt-4">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
-      <p class="mb-0 text-secondary">ECE 196 Final Project Proposal</p>
-      <p class="mb-0 text-secondary">Home • Team • Problem • Solution • Milestones • PCB • Video/Poster</p>
-    </div>
+  <footer>
+    <span>ECE 196 · Final Project Proposal</span>
+    <span>UC San Diego · 2026</span>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
