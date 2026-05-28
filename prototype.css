@@ -1,0 +1,207 @@
+/* ============================================================
+   prototype.css — page-specific styles for prototype.html
+   Loaded alongside styles.css
+   ============================================================ */
+
+/* ---------- 01 Final design hero (large image + description) ---------- */
+.hero-figure {
+  margin: 1.5rem 0 0;
+}
+
+.hero-figure .frame {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-alt);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+  background-image:
+    repeating-linear-gradient(45deg, transparent 0 24px, rgba(0,0,0,0.018) 24px 25px);
+}
+
+.hero-figure .frame::before {
+  content: "Final prototype placeholder";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.hero-figure img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  z-index: 1;
+}
+
+.hero-figure figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 0.9rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--ink);
+  max-width: 65ch;
+  margin: 1.5rem auto 0;
+}
+
+/* ---------- Trio grid (3 figures + bullets) ---------- */
+.trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  margin-top: 2rem;
+}
+
+.trio figure { margin: 0; }
+
+.trio .frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-alt);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+  background-image:
+    repeating-linear-gradient(45deg, transparent 0 22px, rgba(0,0,0,0.018) 22px 23px);
+}
+
+.trio .frame::before {
+  content: "Image";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.trio img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  z-index: 1;
+}
+
+.trio figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Bullets under each trio figure */
+.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0.9rem 0 0;
+  max-width: none;
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 1.4em;
+  margin-bottom: 0.55em;
+  line-height: 1.55;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.bullets li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ---------- 04 Conclusion prose ---------- */
+.prose-block {
+  max-width: 62ch;
+  margin: 1.5rem 0 0;
+}
+
+.prose-block p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--ink);
+  margin: 0 0 1.2em;
+  max-width: none;
+}
+
+.prose-block p:last-child { margin-bottom: 0; }
+
+/* ---------- 05 References (academic-style) ---------- */
+.references {
+  list-style: none;
+  padding: 0;
+  margin: 1.8rem 0 0;
+  counter-reset: ref;
+  max-width: 70ch;
+}
+
+.references li {
+  counter-increment: ref;
+  position: relative;
+  padding: 0.9rem 0 0.9rem 3em;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.references li::before {
+  content: "[" counter(ref) "]";
+  position: absolute;
+  left: 0;
+  top: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+.references a {
+  color: var(--accent);
+  background: none;
+}
+
+.references a:hover {
+  color: var(--accent-dk);
+  background: none;
+}
+
+/* ---------- Mobile stacking ---------- */
+@media (max-width: 720px) {
+  .trio {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

@@ -40,30 +40,37 @@
     <!-- ============ 01 — OVERVIEW ============ -->
     <section data-num="01">
       <span class="label">Solution overview</span>
-      <h2>A pillbox that wants you to take your meds.</h2>
+      <h2>Our Proposed Solution</h2>
  
       <div class="solution-overview">
         <figure class="overview-figure">
           <div class="frame">
             <img src="images/pillbox_sketch.png" alt="Generated concept sketch of the smart pillbox" onerror="this.style.display='none'" />
           </div>
-          <figcaption>Generated concept sketch</figcaption>
+          <figcaption>AI Generated concept sketch</figcaption>
         </figure>
  
         <div class="overview-text">
           <p class="lede">
-            Our solution is a portable, rechargeable smart pillbox with four pill containers &mdash; each equipped with LEDs and a button.
+           We combined an app that has easy-to-set reminders and an adherence-rewarding incentivization system 
+           with a smart pillbox that clearly indicates the pills to take with LEDs and allows users to confirm taking with buttons.
           </p>
           <p>
-            A PCB underneath connects the system to Wi-Fi and Bluetooth, allowing a companion mobile app to manage medication schedules, send reminders, light the correct container, and record when pills are taken. The app uses features like daily streaks to encourage long-term consistency.
+            In our design, there are three fundamental aspects: the iOS app, the PCB, and the pillbox. 
+            The iOS app is controlled on the user's phone, the PCB is placed within the pillbox (the bottom). 
+            The pillbox contains four compartments, each storing one type of pill, at the front of each compartment there are 4 LEDs and one button.
+            When using our design, users will be able to set customizable repeating schedules via an iOS app.
+            At the scheduled times, the user's phone will receive a notification and the app will control the PCB over BLE to light the corresponding number of LEDs from the corresponding compartment (2 LEDs = 2 pills).
+            After taking the indicated pills, user's press the button on the compartment, indicating to the app to confirm the taking and provide the incentivization rewards.
+
           </p>
         </div>
       </div>
  
       <aside class="callout">
-        <span class="callout-label">A clever touch</span>
+        <span class="callout-label">Efficient Addition</span>
         <p>
-          An IMU module lets the device detect when it's being grabbed or lifted &mdash; activating LEDs only when needed and conserving battery during long idle stretches.
+          An IMU module lets the device detect when it's being grabbed or lifted, only activating LEDs only when needed and conserving battery during long idle stretches.
         </p>
       </aside>
     </section>
