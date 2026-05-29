@@ -200,7 +200,7 @@
 .milestone-figure {
   margin: 0;
   flex: 0 0 auto;
-  width: clamp(140px, 22vw, 200px);
+  width: clamp(220px, 34vw, 380px);
 }
 
 .milestone-figure .frame {
@@ -238,14 +238,16 @@
   z-index: 1;
 }
 
-/* the small line under each image naming its milestone */
+/* the line under each image naming its milestone */
 .milestone-figure figcaption {
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-soft);
-  margin-top: 0.55rem;
+  color: var(--ink);
+  margin-top: 0.7rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--accent);
   line-height: 1.45;
 }
  
@@ -261,5 +263,5 @@
     display: block;
   }
   .milestone-body { flex-direction: column; }
-  .milestone-figure { width: 100%; max-width: 280px; }
+  .milestone-figure { width: 100%; max-width: 360px; }
 }
