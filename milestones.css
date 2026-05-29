@@ -184,6 +184,70 @@
   margin: 0;
   max-width: 60ch;
 }
+
+/* ---------- Milestone body: text + thumbnail side by side ---------- */
+.milestone-body {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1.2rem, 3vw, 2.5rem);
+}
+
+.milestone-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.milestone-figure {
+  margin: 0;
+  flex: 0 0 auto;
+  width: clamp(140px, 22vw, 200px);
+}
+
+.milestone-figure .frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-alt);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+  background-image:
+    repeating-linear-gradient(45deg, transparent 0 18px, rgba(0,0,0,0.018) 18px 19px);
+}
+
+/* placeholder label, shown until a real image loads on top */
+.milestone-figure .frame::before {
+  content: "Image";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.milestone-figure img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  z-index: 1;
+}
+
+/* the small line under each image naming its milestone */
+.milestone-figure figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 0.55rem;
+  line-height: 1.45;
+}
  
 /* ---------- Mobile: collapse the date column inline ---------- */
 @media (max-width: 720px) {
@@ -196,5 +260,6 @@
     margin-bottom: 0.5rem;
     display: block;
   }
+  .milestone-body { flex-direction: column; }
+  .milestone-figure { width: 100%; max-width: 280px; }
 }
- 

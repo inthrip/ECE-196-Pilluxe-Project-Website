@@ -43,14 +43,15 @@
       <span class="label">Testable hypothesis</span>
       <h2>Testable Hypothesis</h2>
       <blockquote class="hypothesis">
-        When users rely on this device, reminders remove the burden of constant memorization, and the incentive system reframes taking medication as something rewarding rather than tedious &mdash; ultimately improving medication adherence rates.
+        When users rely on this device, reminders remove the burden of constant memorization, and the incentive system reframes taking medication as something rewarding rather than tedious &mdash;
+         ultimately measurably improving medication adherence rates among users.
       </blockquote>
     </section>
  
     <!-- ============ 02 — TIMELINE FIGURE ============ -->
     <section data-num="02">
-      <span class="label">At a glance</span>
-      <h2>Everything on one timeline.</h2>
+      <span class="label">First Plans</span>
+      <h2>Our Original Timeline</h2>
  
       <figure class="timeline-figure">
         <div class="frame">
@@ -68,61 +69,190 @@
       <ol class="milestones">
         <li class="milestone milestone--done">
           <div class="milestone-date">Wk 5 · Fri</div>
-          <div class="milestone-head">
-            <span class="milestone-num">Milestone 01</span>
-            <span class="milestone-status milestone-status--done">Completed</span>
+          <div class="milestone-body">
+            <div class="milestone-text">
+              <div class="milestone-head">
+                <span class="milestone-num">Milestone 01</span>
+                <span class="milestone-status milestone-status--done">Completed on Time</span>
+              </div>
+              <h3>PCB Fully Designed</h3>
+              <p>Our PCB was fully designed and ordered, implemeneting all the intended features: Bluetooth capability, through-holees for connecting to external LEDs and buttons,
+                 an IMU module, and rechargeability for the battery. No significant issues or pivots.
+                 </p>
+            </div>
+            <figure class="milestone-figure">
+              <div class="frame">
+                <img src="images/pcb_3D.jpeg" alt="Milestone 01 deliverable — completed PCB" onerror="this.style.display='none'" />
+              </div>
+              <figcaption>Milestone 01 · PCB &amp; connectivity</figcaption>
+            </figure>
           </div>
-          <h3>PCB and connectivity completed.</h3>
-          <p>PCB designed with Bluetooth capabilities, colored LEDs, and buttons &mdash; all fully connected.</p>
         </li>
  
         <li class="milestone milestone--done">
           <div class="milestone-date">Wk 6 · Fri</div>
-          <div class="milestone-head">
-            <span class="milestone-num">Milestone 02</span>
-            <span class="milestone-status milestone-status--done">Completed</span>
+          <div class="milestone-body">
+            <div class="milestone-text">
+              <div class="milestone-head">
+                <span class="milestone-num">Milestone 02</span>
+                <span class="milestone-status milestone-status--done">Completed</span>
+              </div>
+              <h3>BLE Communication Completed</h3>
+              <p> iOS to ESP32 BLE communication was fully implemented (LightBlue/Arduino Sketch) and our Phone was able to successfully read button
+                 presses from our DevBoard and light LEDs connected to our DevBoard over BLE.
+                Implementing this was actually slightly easier than expected. </p>
+            </div>
+            <figure class="milestone-figure">
+              <div class="frame">
+                <img src="images/milestone-02.png" alt="Milestone 02 deliverable — 3D-printed enclosure" onerror="this.style.display='none'" />
+              </div>
+              <figcaption>Milestone 02 · Software Integration</figcaption>
+            </figure>
           </div>
-          <h3>CAD and 3D printing completed.</h3>
-          <p>CAD model finished and the pill container 3D-printed with openings for LEDs and push buttons.</p>
         </li>
  
         <li class="milestone milestone--updated">
-          <div class="milestone-date">Wk 7 · Wed</div>
-          <div class="milestone-head">
-            <span class="milestone-num">Milestone 03</span>
-            <span class="milestone-status milestone-status--updated">Updated</span>
+          <div class="milestone-date">Wk 7 · Fri</div>
+          <div class="milestone-body">
+            <div class="milestone-text">
+              <div class="milestone-head">
+                <span class="milestone-num">Milestone 03</span>
+                <span class="milestone-status milestone-status--updated">Completed with Small Delay</span>
+              </div>
+              <h3>Bare iOS App Completed</h3>
+              <p>We were able to implement and run a very basic app on our iPhone. Our previously designed BLE communication was
+                scaffolded to be compatible with our app, allowing our app to be
+                able to communicate over BLE to control our DevBoard.
+                Our app was very basic though, limited to only lighting and adjusting LEDs and registering buttons presses. 
+                This milestone experciened slight delays due to issues debugging Swift code and setting up Xcode.
+                 </p>
+            </div>
+            <figure class="milestone-figure">
+              <div class="frame">
+                <img src="images/milestone-03.png" alt="Milestone 03 deliverable — app and PCB communication" onerror="this.style.display='none'" />
+              </div>
+              <figcaption>Milestone 03 · Bare App Completion</figcaption>
+            </figure>
           </div>
-          <h3>Software integration completed.</h3>
-          <p>A barebones app implemented that communicates with the PCB and controls the onboard LEDs.</p>
+        </li>
+     <li class="milestone milestone--done">
+          <div class="milestone-date">Wk 8 · Wed</div>
+          <div class="milestone-body">
+            <div class="milestone-text">
+              <div class="milestone-head">
+                <span class="milestone-num">Milestone 04</span>
+                <span class="milestone-status milestone-status--done">Completed on Time </span>
+              </div>
+              <h3>App Scheduling and Visual Features Implemented</h3>
+              <p> App updated with a coherent visual design, a scheduling page for 
+                customizing repeatable reminders which light the corresponding LEDs,
+                 a homepage for viewing reminders, and registering button presses for confirming doses.
+            </div>
+            <figure class="milestone-figure">
+              <div class="frame">
+                <img src="images/milestone-04.png" alt="Milestone 04 deliverable — streaks and rewards" onerror="this.style.display='none'" />
+              </div>
+              <figcaption>Milestone 04 · App scheduling/visual features</figcaption>
+            </figure>
+          </div>
         </li>
  
-        <li class="milestone">
-          <div class="milestone-date">Wk 8 · Fri</div>
-          <div class="milestone-head">
-            <span class="milestone-num">Milestone 04</span>
-          </div>
-          <h3>App incentive features implemented.</h3>
-          <p>App configured with visual design, day-by-day streaks, and an incentive-based reward system.</p>
-        </li>
- 
-        <li class="milestone milestone--optional">
+        <li class="milestone milestone--updated">
           <div class="milestone-date">Wk 9 · Mon</div>
-          <div class="milestone-head">
-            <span class="milestone-num">Milestone 05</span>
-            <span class="milestone-status milestone-status--optional">Optional</span>
+          <div class="milestone-body">
+            <div class="milestone-text">
+              <div class="milestone-head">
+                <span class="milestone-num">Milestone 05</span>
+                <span class="milestone-status milestone-status--updated">Completed with Small Delay</span>
+              </div>
+              <h3> App Incetivization System and User-Customization Implemented (App Completed)</h3>
+              <p>
+                  Our app's final intended features were successfully implemented: dose and daily streaks 
+                  act as incentivization, users are able to customize their box LEDs as well as the app visuals, 
+                  All app controls were verified on our soldered PCB.
+
+              </p>
+            </div>
+            <figure class="milestone-figure">
+              <div class="frame">
+                <img src="images/full_app.jpg" alt="Milestone 05 deliverable — Completed App" onerror="this.style.display='none'" />
+              </div>
+              <figcaption>Milestone 05 · Full App Completion</figcaption>
+            </figure>
           </div>
-          <h3>Diary system completed.</h3>
-          <p>Diary system that lets users track their condition across time, alongside their medication routine.</p>
+        </li>
+
+
+
+        
+        <li class="milestone milestone--updated">
+          <div class="milestone-date">Wk 9 · Mon</div>
+          <div class="milestone-body">
+            <div class="milestone-text">
+              <div class="milestone-head">
+                <span class="milestone-num">Milestone 05</span>
+                <span class="milestone-status milestone-status--updated">Completed with Small Delay</span>
+              </div>
+              <h3> App Incetivization System and User-Customization Implemented (App Completed)</h3>
+              <p>
+                  Our app's final intended features were successfully implemented: dose and daily streaks 
+                  act as incentivization, users are able to customize their box LEDs as well as the app visuals, 
+                  All app controls were verified on our soldered PCB.
+
+              </p>
+            </div>
+            <figure class="milestone-figure">
+              <div class="frame">
+                <img src="images/full_app.jpg" alt="Milestone 05 deliverable — Completed App" onerror="this.style.display='none'" />
+              </div>
+              <figcaption>Milestone 05 · Full App Completion</figcaption>
+            </figure>
+          </div>
+        </li>
+
+
+        
+        <li class="milestone milestone--updated">
+          <div class="milestone-date">Wk 9 · Wed</div>
+          <div class="milestone-body">
+            <div class="milestone-text">
+              <div class="milestone-head">
+                <span class="milestone-num">Milestone 06</span>
+                <span class="milestone-status milestone-status--updated">Completed with HUGE Delay</span>
+              </div>
+              <h3> Smart Pillbox Designed and 3D-Printed</h3>
+              <p>
+                  Creating a 
+
+              </p>
+            </div>
+            <figure class="milestone-figure">
+              <div class="frame">
+                <img src="images/full_app.jpg" alt="Milestone 05 deliverable — Completed App" onerror="this.style.display='none'" />
+              </div>
+              <figcaption>Milestone 05 · Full App Completion</figcaption>
+            </figure>
+          </div>
         </li>
  
         <li class="milestone milestone--final">
           <div class="milestone-date">Wk 9 · Wed</div>
-          <div class="milestone-head">
-            <span class="milestone-num">Final milestone</span>
-            <span class="milestone-status milestone-status--final">Final</span>
+          <div class="milestone-body">
+            <div class="milestone-text">
+              <div class="milestone-head">
+                <span class="milestone-num">Final milestone</span>
+                <span class="milestone-status milestone-status--final">Final</span>
+              </div>
+              <h3>Testing and evaluation phase completed.</h3>
+              <p>Real-world testing of the app to identify flaws and evaluate whether the system actually reduces tedium and feels enjoyable to use.</p>
+            </div>
+            <figure class="milestone-figure">
+              <div class="frame">
+                <img src="images/milestone-final.png" alt="Final milestone deliverable — testing and evaluation" onerror="this.style.display='none'" />
+              </div>
+              <figcaption>Final · Testing &amp; evaluation</figcaption>
+            </figure>
           </div>
-          <h3>Testing and evaluation phase completed.</h3>
-          <p>Real-world testing of the app to identify flaws and evaluate whether the system actually reduces tedium and feels enjoyable to use.</p>
         </li>
       </ol>
     </section>
