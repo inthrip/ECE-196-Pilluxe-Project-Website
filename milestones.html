@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Milestones — ECE 196 Final Project Proposal</title>
- 
+
   <link rel="icon" type="image/jpg" href="favicon.jpg" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="milestones.css" />
 </head>
 <body>
- 
+
   <header>
     <a href="index.html">ECE 196 / Proposal</a>
     <nav>
@@ -21,14 +21,14 @@
         <li><a href="solution.html">Solution</a></li>
         <li><a href="milestones.html" class="current">Milestones</a></li>
         <li><a href="pcb.html">PCB</a></li>
-         <li><a href="prototype.html" >Prototype</a></li>
+        <li><a href="prototype.html">Prototype</a></li>
         <li><a href="video_poster.html">Video / Poster</a></li>
       </ul>
     </nav>
   </header>
- 
+
   <main>
- 
+
     <!-- ============ PAGE INTRO ============ -->
     <section class="page-intro">
       <span class="eyebrow">Project timeline</span>
@@ -37,22 +37,21 @@
         Six engineering milestones, six concrete deliverables. Each one marks completion &mdash; what we'll have done by that date, not when we'll start it.
       </p>
     </section>
- 
+
     <!-- ============ 01 — HYPOTHESIS ============ -->
     <section data-num="01">
       <span class="label">Testable hypothesis</span>
       <h2>Testable Hypothesis</h2>
       <blockquote class="hypothesis">
-        When users rely on this device, reminders remove the burden of constant memorization, and the incentive system reframes taking medication as something rewarding rather than tedious &mdash;
-         ultimately measurably improving medication adherence rates among users.
+        When users rely on this device, reminders remove the burden of constant memorization, and the incentive system reframes taking medication as something rewarding rather than tedious &mdash; ultimately measurably improving medication adherence rates among users.
       </blockquote>
     </section>
- 
+
     <!-- ============ 02 — TIMELINE FIGURE ============ -->
     <section data-num="02">
       <span class="label">First Plans</span>
       <h2>Our Original Timeline</h2>
- 
+
       <figure class="timeline-figure">
         <div class="frame">
           <img src="images/timeline.png" alt="Full project timeline figure" onerror="this.style.display='none'" />
@@ -60,12 +59,12 @@
         <figcaption>Project timeline &mdash; week 5 through week 9</figcaption>
       </figure>
     </section>
- 
+
     <!-- ============ 03 — MILESTONES ============ -->
     <section data-num="03">
       <span class="label">Milestone schedule</span>
       <h2>What completion looks like.</h2>
- 
+
       <ol class="milestones">
         <li class="milestone milestone--done">
           <div class="milestone-date">Wk 5 · Fri</div>
@@ -76,19 +75,17 @@
                 <span class="milestone-status milestone-status--done">Completed on Time</span>
               </div>
               <h3>PCB Fully Designed</h3>
-              <p>Our PCB was fully designed and ordered, implemeneting all the intended features: Bluetooth capability, through-holees for connecting to external LEDs and buttons,
-                 an IMU module, and rechargeability for the battery. No significant issues or pivots.
-                 </p>
+              <p>Our PCB was fully designed and ordered, implementing all the intended features: Bluetooth capability, through-holes for connecting to external LEDs and buttons, an IMU module, and rechargeability for the battery. No significant issues or pivots.</p>
             </div>
             <figure class="milestone-figure">
               <div class="frame">
                 <img src="images/pcb_3D.jpeg" alt="Milestone 01 deliverable — completed PCB" onerror="this.style.display='none'" />
               </div>
-              <figcaption>Milestone 01 · PCB &amp; connectivity</figcaption>
+              <figcaption>Milestone 01 &middot; PCB &amp; connectivity</figcaption>
             </figure>
           </div>
         </li>
- 
+
         <li class="milestone milestone--done">
           <div class="milestone-date">Wk 6 · Fri</div>
           <div class="milestone-body">
@@ -98,19 +95,17 @@
                 <span class="milestone-status milestone-status--done">Completed on Time</span>
               </div>
               <h3>BLE Communication Completed</h3>
-              <p> iOS to ESP32 BLE communication was fully implemented (LightBlue/Arduino Sketch) and our Phone was able to successfully read button
-                 presses from our DevBoard and light LEDs connected to our DevBoard over BLE.
-                Implementing this was actually slightly easier than expected. </p>
+              <p>iOS to ESP32 BLE communication was fully implemented (LightBlue/Arduino Sketch) and our phone was able to successfully read button presses from our DevBoard and light LEDs connected to our DevBoard over BLE. Implementing this was actually slightly easier than expected.</p>
             </div>
             <figure class="milestone-figure">
               <div class="frame">
-                <img src="images/milestone-02.png" alt="Milestone 02 deliverable — 3D-printed enclosure" onerror="this.style.display='none'" />
+                <img src="images/milestone-02.png" alt="Milestone 02 deliverable — BLE communication" onerror="this.style.display='none'" />
               </div>
-              <figcaption>Milestone 02 · Software Integration</figcaption>
+              <figcaption>Milestone 02 &middot; BLE communication</figcaption>
             </figure>
           </div>
         </li>
- 
+
         <li class="milestone milestone--updated">
           <div class="milestone-date">Wk 7 · Fri</div>
           <div class="milestone-body">
@@ -120,22 +115,17 @@
                 <span class="milestone-status milestone-status--updated">Completed with Small Delay</span>
               </div>
               <h3>Bare iOS App Completed</h3>
-              <p>We were able to implement and run a very basic app on our iPhone. Our previously designed BLE communication was
-                scaffolded to be compatible with our app, allowing our app to be
-                able to communicate over BLE to control our DevBoard,
-                limited to only lighting and adjusting LEDs and registering buttons presses. 
-                This milestone experciened slight delays due to issues debugging Swift code and setting up Xcode.
-                 </p>
+              <p>We were able to implement and run a very basic app on our iPhone. Our previously designed BLE communication was scaffolded to be compatible with our app, allowing our app to communicate over BLE to control our DevBoard &mdash; limited to only lighting and adjusting LEDs and registering button presses. This milestone experienced slight delays due to issues debugging Swift code and setting up Xcode.</p>
             </div>
             <figure class="milestone-figure">
               <div class="frame">
-                <img src="images/milestone-03.png" alt="Milestone 03 deliverable — app and PCB communication" onerror="this.style.display='none'" />
+                <img src="images/milestone-03.png" alt="Milestone 03 deliverable — bare iOS app" onerror="this.style.display='none'" />
               </div>
-              <figcaption>Milestone 03 · Bare App Completion</figcaption>
+              <figcaption>Milestone 03 &middot; Bare app completion</figcaption>
             </figure>
           </div>
         </li>
- 
+
         <li class="milestone milestone--updated">
           <div class="milestone-date">Wk 9 · Mon</div>
           <div class="milestone-body">
@@ -144,25 +134,18 @@
                 <span class="milestone-num">Milestone 04</span>
                 <span class="milestone-status milestone-status--updated">Completed with Small Delay</span>
               </div>
-              <h3> App Incetivization System and User-Customization Implemented (App Completed)</h3>
-              <p>
-                  Our app's final intended features were successfully implemented: dose and daily streaks 
-                  act as incentivization, users are able to customize their box LEDs as well as the app visuals, 
-                  All app controls were verified on our soldered PCB.
-     </p>
+              <h3>App Scheduling and Incentivization Implemented</h3>
+              <p>Our app's final intended features were successfully implemented: users can set schedules and receive reminders, dose and daily streaks act as adherence incentivization, and users are able to customize their box LEDs as well as the app visuals. All app controls work on pillbox hardware.</p>
             </div>
             <figure class="milestone-figure">
               <div class="frame">
-                <img src="images/full_app.jpg" alt="Milestone 03 deliverable — app and PCB communication" onerror="this.style.display='none'" />
+                <img src="images/full_app.jpg" alt="Milestone 04 deliverable — fully implemented app" onerror="this.style.display='none'" />
               </div>
-              <figcaption>Milestone 03 · Bare App Completion</figcaption>
+              <figcaption>Milestone 04 &middot; Full app implementation</figcaption>
             </figure>
           </div>
         </li>
 
-
-
-        
         <li class="milestone milestone--updated">
           <div class="milestone-date">Wk 9 · Wed</div>
           <div class="milestone-body">
@@ -171,23 +154,20 @@
                 <span class="milestone-num">Milestone 05</span>
                 <span class="milestone-status milestone-status--updated">Completed with HUGE Delay</span>
               </div>
-              <h3> Smart Pillbox Designed and 3D-Printed</h3>
-              <p>
-                  Creating a 
-
-              </p>
+              <h3>Smart Pillbox Designed and 3D-Printed</h3>
+              <p>[Description of the 3D-printed pillbox milestone goes here. Discuss the CAD iterations, the setback from the misordered component, and the final assembled enclosure with its compartments, button cutouts, and LED openings.]</p>
             </div>
             <figure class="milestone-figure">
               <div class="frame">
-                <img src="images/milestones6.jpg" alt="Milestone 05 deliverable — Completed App" onerror="this.style.display='none'" />
+                <img src="images/milestones6.jpg" alt="Milestone 05 deliverable — 3D-printed pillbox" onerror="this.style.display='none'" />
               </div>
-              <figcaption>Milestone 06 · Pillbox 3D-print Completion</figcaption>
+              <figcaption>Milestone 05 &middot; Pillbox 3D-print completion</figcaption>
             </figure>
           </div>
         </li>
- 
+
         <li class="milestone milestone--final">
-          <div class="milestone-date">Wk 9 · Fri/div>
+          <div class="milestone-date">Wk 9 · Fri</div>
           <div class="milestone-body">
             <div class="milestone-text">
               <div class="milestone-head">
@@ -201,38 +181,38 @@
               <div class="frame">
                 <img src="images/milestone-final.png" alt="Final milestone deliverable — testing and evaluation" onerror="this.style.display='none'" />
               </div>
-              <figcaption>Final · Testing &amp; evaluation</figcaption>
+              <figcaption>Final &middot; Testing &amp; evaluation</figcaption>
             </figure>
           </div>
         </li>
       </ol>
     </section>
- 
+
     <!-- ============ 04 — CHALLENGES ============ -->
     <section data-num="04">
       <span class="label">Challenges we've faced</span>
       <h2>When the plan met reality.</h2>
- 
+
       <p>
         Not everything has gone smoothly. Partway through the project, one of the components for our PCB was misordered &mdash; a small clerical mistake with an outsized timeline consequence. The correct part took several extra days to arrive, which postponed the soldering of our PCB and pushed back the chain of dependent tasks behind it.
       </p>
- 
+
       <p>
         The setback was its own lesson. We've learned to be meticulous with every aspect of the project &mdash; verifying part specifications, double-checking orders, confirming numbers &mdash; long before any soldering iron comes out.
       </p>
     </section>
- 
+
     <!-- ============ BACK LINK ============ -->
     <div class="page-end">
       <a href="index.html" class="back-link">&larr; Back to home</a>
     </div>
- 
+
   </main>
- 
+
   <footer>
     <span>ECE 196 · Final Project Proposal</span>
     <span>UC San Diego · 2026</span>
   </footer>
- 
+
 </body>
 </html>
