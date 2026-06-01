@@ -88,25 +88,24 @@
  
     <!-- ============ 04 — DESIGN RATIONALE ============ -->
     <section data-num="04">
-      <span class="label">Mini Project Tutorial</span>
-      <h2>Why we made these choices.</h2>
+      <span class="label">Mini Project Tutorials</span>
+      <h2>Our Mini Projects</h2>
  
       <div class="rationale">
         <div class="rationale-col">
-          <h4>IMU Motion Detecting</h4>
+          <h4>ADXL343 Lifting Detection Tutorial</h4>
           <ul>
-            <li>The IMU Module detects significant motion, and indicates to the rest of the PCB when to light.</li>
-            <li>BLE support lets the board communicate with the mobile app for schedules, reminders, and tracking.</li>
+            <li>This tutorial covers how to use an ADXL343 in order to detect when the PCB is lifted.</li>
+            <li>In our project, we use this to tell the microcontroller when to light the battery LEDs.</li>
+            
           </ul>
         </div>
  
         <div class="rationale-col">
-          <h4>Deep Sleep</h4>
+          <h4>Deep Sleep Tutorial</h4>
           <ul>
-            <li>Receives medication schedule data from the app via BLE to the microcontroller.</li>
-            <li>Activates the correct LEDs to guide users to the right pill container at the scheduled time.</li>
-            <li>Reads button presses to confirm that the correct medication was accessed and taken.</li>
-            <li>Sends status updates back to the app so reminders, logs, and streak tracking stay synchronized.</li>
+            <li>This tutorial covers how to configure a PCB to enter deep sleep under certain conditions.</li>
+            <li>In our project, the PCB enters a partial sleep after motion is not detected for some time.</li>
           </ul>
         </div>
       </div>
