@@ -88,22 +88,20 @@
  
     <!-- ============ 04 — DESIGN RATIONALE ============ -->
     <section data-num="04">
-      <span class="label">Design rationale</span>
+      <span class="label">Mini Project Tutorial</span>
       <h2>Why we made these choices.</h2>
  
       <div class="rationale">
         <div class="rationale-col">
-          <h4>Design choices</h4>
+          <h4>IMU Motion Detecting</h4>
           <ul>
-            <li>The PCB centralizes control of LEDs and buttons so the pillbox hardware stays organized and easier to wire.</li>
+            <li>The IMU Module detects significant motion, and indicates to the rest of the PCB when to light.</li>
             <li>BLE support lets the board communicate with the mobile app for schedules, reminders, and tracking.</li>
-            <li>Component placement is arranged for a compact footprint that fits underneath the pill containers.</li>
-            <li>An IMU module detects when the device is actually in use, optimizing power usage during long idle stretches.</li>
           </ul>
         </div>
  
         <div class="rationale-col">
-          <h4>Functionality</h4>
+          <h4>Deep Sleep</h4>
           <ul>
             <li>Receives medication schedule data from the app via BLE to the microcontroller.</li>
             <li>Activates the correct LEDs to guide users to the right pill container at the scheduled time.</li>

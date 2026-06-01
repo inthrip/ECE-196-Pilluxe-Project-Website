@@ -2,10 +2,10 @@
    milestones.css — page-specific styles for milestones.html
    Loaded alongside styles.css
    ============================================================ */
- 
+
 /* ---------- 01 Testable hypothesis — pull-quote ---------- */
 /* (uses base blockquote styles from styles.css) */
- 
+
 .hypothesis {
   font-size: clamp(1.25rem, 1.8vw, 1.55rem);
   line-height: 1.5;
@@ -13,10 +13,10 @@
   max-width: 62ch;
   margin-top: 2rem;
 }
- 
+
 /* ---------- 02 Timeline figure ---------- */
 .timeline-figure { margin-top: 2rem; }
- 
+
 .timeline-figure .frame {
   position: relative;
   background: var(--bg);
@@ -27,7 +27,7 @@
   background-image:
     repeating-linear-gradient(45deg, transparent 0 24px, rgba(0,0,0,0.012) 24px 25px);
 }
- 
+
 .timeline-figure img {
   display: block;
   width: 100%;
@@ -37,7 +37,7 @@
   border: none;
   background: var(--bg);
 }
- 
+
 .timeline-figure figcaption {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -46,7 +46,7 @@
   color: var(--ink-soft);
   margin-top: 0.9rem;
 }
- 
+
 /* ---------- 03 Milestone list — vertical timeline ---------- */
 .milestones {
   list-style: none;
@@ -55,19 +55,19 @@
   position: relative;
   max-width: none;
 }
- 
+
 .milestone {
   position: relative;
   padding: 0.3rem 0 2.6rem 2.2rem;
   border-left: 1px solid var(--rule);
   margin: 0;
 }
- 
+
 .milestone:last-child {
   border-left-color: transparent;
   padding-bottom: 0.3rem;
 }
- 
+
 /* Date column (absolutely positioned to the left) */
 .milestone-date {
   position: absolute;
@@ -82,7 +82,7 @@
   color: var(--ink-soft);
   line-height: 1.4;
 }
- 
+
 /* The dot on the timeline */
 .milestone::before {
   content: "";
@@ -96,7 +96,7 @@
   border: 2px solid var(--accent);
   z-index: 1;
 }
- 
+
 /* Dot variations by state */
 .milestone--done::before {
   background: var(--accent);
@@ -117,7 +117,7 @@
   left: -8px;
   top: 0.5rem;
 }
- 
+
 /* Header row: milestone number + status pill */
 .milestone-head {
   display: flex;
@@ -126,7 +126,7 @@
   flex-wrap: wrap;
   margin-bottom: 0.55rem;
 }
- 
+
 .milestone-num {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -134,7 +134,7 @@
   text-transform: uppercase;
   color: var(--accent);
 }
- 
+
 .milestone-status {
   font-family: var(--font-mono);
   font-size: 0.66rem;
@@ -144,7 +144,7 @@
   line-height: 1.4;
   border: 1px solid currentColor;
 }
- 
+
 .milestone-status--done {
   color: var(--bg);
   background: var(--accent);
@@ -166,7 +166,7 @@
   background: var(--ink);
   border-color: var(--ink);
 }
- 
+
 .milestone h3 {
   font-family: var(--font-display);
   font-weight: 400;
@@ -176,7 +176,7 @@
   color: var(--ink);
   line-height: 1.2;
 }
- 
+
 .milestone p {
   font-size: 1rem;
   line-height: 1.65;
@@ -205,15 +205,18 @@
 
 .milestone-figure .frame {
   position: relative;
-  aspect-ratio: 4 / 3;
   background: var(--bg-alt);
   border: 1px solid var(--rule);
-  overflow: hidden;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image:
     repeating-linear-gradient(45deg, transparent 0 18px, rgba(0,0,0,0.018) 18px 19px);
+  /* No aspect-ratio, no overflow: hidden — frame adapts to whatever shape the image is */
 }
 
-/* placeholder label, shown until a real image loads on top */
+/* placeholder label, only visible if image fails to load */
 .milestone-figure .frame::before {
   content: "Image";
   position: absolute;
@@ -226,14 +229,16 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-soft);
+  pointer-events: none;
 }
 
 .milestone-figure img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  position: relative;
+  display: block;
+  max-width: 100%;
+  max-height: 540px;
+  width: auto;
+  height: auto;
   border: none;
   z-index: 1;
 }
@@ -250,7 +255,7 @@
   border-top: 1px solid var(--accent);
   line-height: 1.45;
 }
- 
+
 /* ---------- Mobile: collapse the date column inline ---------- */
 @media (max-width: 720px) {
   .milestones { padding-left: 1.5rem; }
