@@ -232,6 +232,16 @@ main > h1:first-child {
   margin: 0 0 2rem;
   max-width: 50ch;
 }
+.hero-text .byline {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  font-weight: 300;
+  font-style: normal;
+  color: var(--ink-soft);
+  margin: -0.5rem 0 1.5rem;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+}
  
 .cta-row {
   display: flex;
@@ -245,7 +255,7 @@ main > h1:first-child {
 
 .brand-mark img {
   display: block;
-  max-width: 40px;
+  max-width: 200px;
   width: auto;
   height: auto;
 }
