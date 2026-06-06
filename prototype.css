@@ -152,41 +152,84 @@
 /* ---------- 05 References (academic-style) ---------- */
 .references {
   list-style: none;
-  padding: 0;
-  margin: 1.8rem 0 0;
   counter-reset: ref;
-  max-width: 70ch;
+  padding: 0;
+  margin: 2rem 0 0;
+  max-width: none;
 }
 
 .references li {
   counter-increment: ref;
-  position: relative;
-  padding: 0.9rem 0 0.9rem 3em;
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem clamp(1.5rem, 4vw, 3rem);
+  padding: 1.6rem 0;
   border-bottom: 1px solid var(--rule);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--ink);
+  align-items: start;
 }
 
 .references li::before {
   content: "[" counter(ref) "]";
-  position: absolute;
-  left: 0;
-  top: 0.9rem;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--accent);
-  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--ink-soft);
+  padding-top: 0.15rem;
 }
 
-.references a {
-  color: var(--accent);
-  background: none;
+.ref-citation {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink);
 }
 
-.references a:hover {
-  color: var(--accent-dk);
-  background: none;
+.ref-citation a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  word-break: break-word;
+}
+
+.ref-citation em {
+  font-style: italic;
+}
+
+.ref-usage {
+  border-left: 1px solid var(--rule);
+  padding-left: clamp(1.2rem, 3vw, 2rem);
+}
+
+.ref-usage-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.ref-usage p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+  color: var(--ink);
+}
+
+/* Stack on mobile */
+@media (max-width: 720px) {
+  .references li {
+    grid-template-columns: 2rem minmax(0, 1fr);
+  }
+  .ref-usage {
+    grid-column: 2;
+    border-left: none;
+    border-top: 1px solid var(--rule);
+    padding-left: 0;
+    padding-top: 1rem;
+    margin-top: 0.3rem;
+  }
 }
 
 /* ---------- Mobile stacking ---------- */
