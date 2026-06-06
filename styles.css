@@ -239,7 +239,16 @@ main > h1:first-child {
   flex-wrap: wrap;
   margin-top: 1.8rem;
 }
- 
+.brand-mark {
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.brand-mark img {
+  display: block;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+}
 .hero-image {
   margin: 0;
   position: relative;
