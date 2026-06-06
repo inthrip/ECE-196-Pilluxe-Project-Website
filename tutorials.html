@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorials — ECE 196 Final Project Proposal</title>
+
+  <link rel="icon" type="image/jpg" href="favicon.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="tutorials.css" />
+</head>
+<body>
+
+  <header>
+    <a href="index.html">ECE 196 / Proposal</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="problem.html">Problem</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="milestones.html">Milestones</a></li>
+        <li><a href="pcb.html">PCB</a></li>
+        <li><a href="prototype.html">Prototype</a></li>
+        <li><a href="tutorials.html" class="current">Tutorials</a></li>
+        <li><a href="video_poster.html">Video / Poster</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ PAGE INTRO ============ -->
+    <section class="page-intro">
+      <span class="eyebrow">Build it yourself</span>
+      <h1>How we did it, step by step.</h1>
+      <p class="lede">
+        Two walkthroughs documenting the technical work behind Pilluxe &mdash; written for anyone wanting to reproduce, modify, or build on what we made.
+      </p>
+    </section>
+
+    <!-- ============ 01 — TUTORIAL ONE ============ -->
+    <section data-num="01">
+      <span class="label">Tutorial 01</span>
+      <article class="markdown-content" id="tutorial-01">
+        <p class="md-loading">Loading tutorial&hellip;</p>
+      </article>
+    </section>
+
+    <!-- ============ 02 — TUTORIAL TWO ============ -->
+    <section data-num="02">
+      <span class="label">Tutorial 02</span>
+      <article class="markdown-content" id="tutorial-02">
+        <p class="md-loading">Loading tutorial&hellip;</p>
+      </article>
+    </section>
+
+    <!-- ============ BACK LINK ============ -->
+    <div class="page-end">
+      <a href="index.html" class="back-link">&larr; Back to home</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <span>ECE 196 &middot; Final Project Proposal</span>
+    <span>UC San Diego &middot; 2026</span>
+  </footer>
+
+  <!-- Markdown renderer -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    async function loadMarkdown(url, targetId) {
+      const target = document.getElementById(targetId);
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const text = await response.text();
+        target.innerHTML = marked.parse(text);
+      } catch (err) {
+        target.innerHTML =
+          '<p class="md-error">Could not load <code>' + url + '</code>. ' +
+          'Make sure the file exists and the page is served over http:// rather than opened as a local file.</p>';
+      }
+    }
+
+    loadMarkdown('tutorials/tutorial-01.md', 'tutorial-01');
+    loadMarkdown('tutorials/tutorial-02.md', 'tutorial-02');
+  </script>
+
+</body>
+</html>
