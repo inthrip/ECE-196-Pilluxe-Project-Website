@@ -245,7 +245,7 @@ main > h1:first-child {
 
 .brand-mark img {
   display: block;
-  max-height: 80px;
+  max-width: 100px;
   width: auto;
   height: auto;
 }
