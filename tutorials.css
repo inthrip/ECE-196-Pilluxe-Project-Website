@@ -1,0 +1,299 @@
+/* ============================================================
+   tutorials.css — page-specific styles for tutorials.html
+   Styles markdown-rendered HTML inside .markdown-content blocks.
+   Loaded alongside styles.css
+   ============================================================ */
+/* ---------- Tutorial nav cards (top of page) ---------- */
+.tutorial-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.tutorial-card {
+  position: relative;
+  display: block;
+  padding: 1.6rem 1.8rem;
+  border: 1px solid var(--rule);
+  background: var(--bg);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.tutorial-card:hover {
+  border-color: var(--accent);
+  background: var(--bg-alt);
+}
+
+.tutorial-card-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.tutorial-card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tutorial-card-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.tutorial-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.tutorial-card-arrow {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.8rem;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.tutorial-card:hover .tutorial-card-arrow {
+  color: var(--accent);
+  transform: translateX(3px);
+}
+
+/* Smooth scrolling so anchor jumps feel less jarring */
+html { scroll-behavior: smooth; }
+
+/* Anchor offset so headings clear the sticky-ish nav area on jump */
+section[id^="tutorial-"] {
+  scroll-margin-top: 2rem;
+}
+
+@media (max-width: 720px) {
+  .tutorial-nav {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Markdown article container ---------- */
+.markdown-content {
+  max-width: 68ch;
+  margin-top: 2rem;
+}
+
+/* default vertical rhythm between any two adjacent children */
+.markdown-content > * + * {
+  margin-top: 1.4rem;
+}
+
+/* ---------- Heading hierarchy inside markdown ---------- */
+.markdown-content h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+.markdown-content h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.2rem, 1.7vw, 1.4rem);
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  margin-top: 2.8rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid var(--rule);
+  color: var(--ink);
+}
+
+.markdown-content h3 {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 2rem;
+}
+
+/* ---------- Body text ---------- */
+.markdown-content p,
+.markdown-content li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 1.4rem;
+  max-width: 65ch;
+}
+
+.markdown-content li + li {
+  margin-top: 0.3rem;
+}
+
+.markdown-content a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.markdown-content a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.markdown-content strong { font-weight: 600; }
+.markdown-content em { font-style: italic; }
+
+/* ---------- Inline code ---------- */
+.markdown-content :not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--bg-alt);
+  padding: 0.15em 0.4em;
+  border-radius: 2px;
+  border: 1px solid var(--rule);
+  color: var(--ink);
+}
+
+/* ---------- Fenced code blocks ---------- */
+.markdown-content pre {
+  background: #1f1c17;
+  color: #e8e2d4;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  padding: 1.2rem 1.4rem;
+  overflow-x: auto;
+  border-left: 3px solid var(--accent);
+  margin-top: 1.4rem;
+}
+
+.markdown-content pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ---------- Blockquote callouts ---------- */
+.markdown-content blockquote {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  font-weight: 400;
+  margin: 1.6rem 0;
+  padding: 0.9rem 0 0.9rem 1.4rem;
+  border-left: 2px solid var(--accent);
+  color: var(--ink-soft);
+  background: transparent;
+}
+
+.markdown-content blockquote p {
+  margin: 0;
+}
+
+.markdown-content blockquote p + p {
+  margin-top: 0.7rem;
+}
+
+.markdown-content blockquote strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ---------- Tables ---------- */
+.markdown-content table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+  margin: 1.6rem 0;
+}
+
+.markdown-content thead {
+  border-bottom: 1px solid var(--ink);
+}
+
+.markdown-content th,
+.markdown-content td {
+  text-align: left;
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+.markdown-content th {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+/* ---------- Horizontal rule ---------- */
+.markdown-content hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+/* ---------- Images inside markdown ---------- */
+.markdown-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  margin: 1.5rem 0;
+}
+
+/* ---------- Loading and error states ---------- */
+.md-loading {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 2rem;
+}
+
+.md-error {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5a2118;
+  background: rgba(156, 74, 58, 0.08);
+  padding: 1rem 1.2rem;
+  border-left: 3px solid #9c4a3a;
+  margin-top: 2rem;
+}
+
+.md-error code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.1em 0.4em;
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  border-radius: 2px;
+}
